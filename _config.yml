@@ -1,0 +1,22 @@
+title: Blahaj Church
+description: A welcoming and inclusive religious community affirming the sacredness of trans, gender non-conforming, and intersex individuals.
+url: ""
+baseurl: ""
+
+email: info@blahajchurch.org
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md

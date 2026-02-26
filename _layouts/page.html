@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<main>
+  <div class="page-hero">
+    <div class="container">
+      <h1 class="page-title">{{ page.title }}</h1>
+    </div>
+  </div>
+
+  <section class="page-content section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% unless page.hide_cta %}
+  {% include cta-bar.html %}
+  {% endunless %}
+</main>

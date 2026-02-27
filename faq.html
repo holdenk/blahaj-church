@@ -1,0 +1,85 @@
+---
+layout: page
+title: Frequently Asked Questions
+permalink: /faq/
+---
+
+<style>
+  .faq-group {
+    margin-bottom: 40px;
+  }
+  .faq-group h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--pink-light, #f8c8dc);
+    color: var(--text-dark, #2d2d2d);
+  }
+  .faq-item {
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+  .faq-item:hover {
+    border-color: var(--pink, #e91e8c);
+  }
+  .faq-item summary {
+    padding: 18px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-dark, #2d2d2d);
+  }
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item summary::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+    color: var(--pink, #e91e8c);
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+  .faq-item[open] summary::after {
+    transform: rotate(90deg);
+  }
+  .faq-answer {
+    padding: 0 24px 20px;
+    color: var(--text-medium, #555);
+  }
+  .faq-answer p {
+    margin: 0;
+    line-height: 1.7;
+  }
+</style>
+
+<p>Common questions about who we are, what we do, and how to get involved.</p>
+
+{% include disclaimer-banner.html %}
+
+{% assign categories = "General,Participation,Medical,Safety" | split: "," %}
+{% for cat in categories %}
+  <div class="faq-group">
+    <h3>{{ cat }}</h3>
+    {% for item in site.data.faq %}
+      {% if item.category == cat %}
+      <details class="faq-item">
+        <summary>{{ item.question }}</summary>
+        <div class="faq-answer"><p>{{ item.answer }}</p></div>
+      </details>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endfor %}
+
+<p style="margin-top: 40px; text-align: center; color: var(--text-medium, #555);">Still have questions? Email us at <a href="mailto:info@blahajchurch.org">info@blahajchurch.org</a></p>

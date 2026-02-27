@@ -1,20 +1,23 @@
-<header class="site-header">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header class="site-header" role="banner">
   <div class="header-logo">
     <a href="{{ '/' | relative_url }}">
       <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Blahaj Church Logo">
     </a>
   </div>
 
-  <nav class="header-nav">
-    <button class="nav-toggle" aria-label="Toggle navigation">
+  <nav class="header-nav" aria-label="Main navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <i class="fas fa-bars"></i>
     </button>
     <ul class="nav-menu">
       <li><a href="{{ '/' | relative_url }}">Home</a></li>
-      <li><a href="{{ '/about' | relative_url }}">About</a></li>
-      <li><a href="{{ '/who-we-are' | relative_url }}">Who We Are</a></li>
-      <li><a href="{{ '/events' | relative_url }}">Events</a></li>
-      <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+      <li><a href="{{ '/about' | relative_url }}">What We Believe</a></li>
+      <li><a href="{{ '/community' | relative_url }}">Community Life</a></li>
+      <li><a href="{{ '/resources' | relative_url }}">Resources</a></li>
+      <li><a href="{{ '/get-involved' | relative_url }}">Get Involved</a></li>
+      <li><a href="{{ '/faq' | relative_url }}">FAQ</a></li>
+      <li><a href="{{ '/safety' | relative_url }}">Safety &amp; Privacy</a></li>
     </ul>
   </nav>
 </header>

@@ -4,44 +4,719 @@ title: Welcome
 hide_cta: false
 ---
 
-<main>
+<style>
+/* ===========================================
+   Homepage — Soft Sanctuary
+   =========================================== */
+
+/* --- Hero --- */
+.home-hero {
+  position: relative;
+  padding: 100px 0 80px;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(245, 169, 184, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(91, 206, 250, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(246, 168, 182, 0.15) 0%, transparent 40%),
+    linear-gradient(180deg, #fef8fa 0%, #f0f7fc 50%, #fff 100%);
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 140%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(91, 206, 250, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 70% 70%, rgba(245, 169, 184, 0.06) 0%, transparent 40%);
+  animation: heroFloat 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(2%, -1%) rotate(0.5deg); }
+  66% { transform: translate(-1%, 1%) rotate(-0.3deg); }
+}
+
+.home-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-logo {
+  max-height: 140px;
+  margin-bottom: 28px;
+  filter: drop-shadow(0 4px 20px rgba(245, 169, 184, 0.2));
+  animation: logoFadeIn 1s ease-out;
+}
+
+@keyframes logoFadeIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 44px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  animation: heroTextIn 1s ease-out 0.15s both;
+}
+
+@keyframes heroTextIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-summary {
+  font-size: 19px;
+  line-height: 1.75;
+  color: var(--text-medium);
+  max-width: 620px;
+  margin: 0 auto 20px;
+  font-weight: 400;
+  animation: heroTextIn 1s ease-out 0.3s both;
+}
+
+.hero-positioning {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #7a7a8a;
+  max-width: 560px;
+  margin: 0 auto 36px;
+  font-style: italic;
+  animation: heroTextIn 1s ease-out 0.45s both;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: heroTextIn 1s ease-out 0.6s both;
+}
+
+.hero-buttons .btn-pill {
+  font-size: 15px;
+  padding: 14px 36px;
+  letter-spacing: 0.3px;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 14px 36px;
+  background: transparent;
+  color: var(--pink-dark);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 2px solid var(--pink);
+  transition: all 0.25s;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+
+.btn-outline:hover {
+  background: var(--pink);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* --- Decorative divider --- */
+.section-wave {
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink), var(--blue));
+  border-radius: 3px;
+  margin: 0 auto 24px;
+}
+
+/* --- Blahaj Explainer card --- */
+.blahaj-explainer {
+  max-width: 560px;
+  margin: 40px auto 0;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(138, 203, 239, 0.25);
+  border-radius: 16px;
+  padding: 24px 28px;
+  text-align: left;
+  animation: heroTextIn 1s ease-out 0.75s both;
+}
+
+.blahaj-explainer h3 {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+}
+
+.blahaj-explainer h3 i {
+  margin-right: 6px;
+}
+
+.blahaj-explainer p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-medium);
+  margin: 0;
+}
+
+.blahaj-explainer em {
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+/* --- Section headings --- */
+.home-section {
+  padding: 80px 0;
+}
+
+.home-section.alt-bg {
+  background: linear-gradient(180deg, var(--bg-light) 0%, #fff 100%);
+}
+
+.home-section h2 {
+  font-size: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.home-section h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink), var(--blue));
+  border-radius: 3px;
+  margin: 16px auto 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: var(--text-light);
+  max-width: 480px;
+  margin: 16px auto 40px;
+  font-weight: 400;
+}
+
+/* --- Belief cards grid --- */
+.belief-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.belief-card {
+  background: #fff;
+  border: 1px solid #f0eff4;
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.belief-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(245, 169, 184, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.belief-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-size: 22px;
+}
+
+.belief-icon.pink-tint {
+  background: var(--pink-light);
+  color: var(--pink-dark);
+}
+
+.belief-icon.blue-tint {
+  background: rgba(138, 203, 239, 0.2);
+  color: #4a9dc8;
+}
+
+.belief-card h3 {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.belief-card p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-medium);
+  margin: 0;
+}
+
+.section-link {
+  text-align: center;
+  margin-top: 36px;
+}
+
+.section-link a {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--pink-dark);
+  border-bottom: 2px solid var(--pink-light);
+  padding-bottom: 2px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.section-link a:hover {
+  color: var(--blue-dark);
+  border-color: var(--blue-light);
+}
+
+.section-link a i {
+  margin-left: 6px;
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.section-link a:hover i {
+  transform: translateX(3px);
+}
+
+/* --- Community Life preview --- */
+.community-preview {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gathering-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gathering-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #f0eff4;
+  transition: border-color 0.2s;
+}
+
+.gathering-item:hover {
+  border-color: var(--pink);
+}
+
+.gathering-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: linear-gradient(135deg, var(--pink-light), rgba(138, 203, 239, 0.15));
+  color: var(--pink-dark);
+}
+
+.gathering-item h4 {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.gathering-item p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* --- Invitation block --- */
+.invitation-block {
+  padding: 80px 0;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(245, 169, 184, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(91, 206, 250, 0.1) 0%, transparent 50%),
+    linear-gradient(180deg, #fef8fa 0%, #f7fbfe 100%);
+}
+
+.invitation-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.invitation-block h2 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.invitation-block h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink), var(--blue));
+  border-radius: 3px;
+  margin: 16px auto 0;
+}
+
+.invitation-text {
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--text-medium);
+  font-weight: 400;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+/* --- Get Involved grid --- */
+.involve-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.involve-card {
+  display: block;
+  padding: 32px 24px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #f0eff4;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+}
+
+.involve-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(138, 203, 239, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-color: var(--blue-light);
+  text-decoration: none;
+}
+
+.involve-card .involve-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 20px;
+  background: rgba(138, 203, 239, 0.15);
+  color: #4a9dc8;
+  transition: background 0.2s;
+}
+
+.involve-card:hover .involve-icon {
+  background: rgba(138, 203, 239, 0.25);
+}
+
+.involve-card h4 {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.involve-card p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* --- Pull quote --- */
+.pull-quote-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.pull-quote {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px 48px;
+}
+
+.pull-quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink), var(--blue));
+  border-radius: 3px;
+}
+
+.pull-quote blockquote {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.pull-quote cite {
+  display: block;
+  margin-top: 20px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--pink-dark);
+}
+
+/* --- Responsive --- */
+@media (max-width: 767px) {
+  .home-hero {
+    padding: 60px 0 50px;
+  }
+
+  .hero-logo {
+    max-height: 100px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  .hero-summary {
+    font-size: 17px;
+  }
+
+  .hero-positioning {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn-pill,
+  .hero-buttons .btn-outline {
+    width: 240px;
+    text-align: center;
+  }
+
+  .blahaj-explainer {
+    margin: 30px 16px 0;
+  }
+
+  .gathering-list {
+    grid-template-columns: 1fr;
+  }
+
+  .involve-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pull-quote blockquote {
+    font-size: 19px;
+  }
+
+  .pull-quote {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .involve-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero::before { animation: none; }
+  .hero-logo,
+  .hero-title,
+  .hero-summary,
+  .hero-positioning,
+  .hero-buttons,
+  .blahaj-explainer { animation: none; }
+  .belief-card:hover,
+  .involve-card:hover { transform: none; }
+}
+</style>
+
+<main id="main-content">
+
+  <!-- ===== HERO ===== -->
   <div class="home-hero">
     <div class="container">
-      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Blahaj Church">
-      <h1>Blahaj Church</h1>
-      <p class="subtitle">A welcoming and inclusive religious community affirming the sacredness of trans, gender non-conforming, and intersex individuals.</p>
-      <a href="{{ '/about' | relative_url }}" class="btn-pill">Learn About Us</a>
+      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Blahaj Church" class="hero-logo">
+      <h1 class="hero-title">Blahaj Church</h1>
+      <p class="hero-summary">A spiritual community honoring the sacredness of gender diversity. We gather in affirmation, solidarity, and care for trans, nonbinary, and gender-expansive people everywhere.</p>
+      <p class="hero-positioning">We are an active spiritual community rooted in the Bay Area &mdash; not satire, not symbolic, but a real gathering of people building something sacred.</p>
+      <div class="hero-buttons">
+        <a href="{{ '/get-involved' | relative_url }}" class="btn-pill">Join Our Community</a>
+        <a href="{{ '/about' | relative_url }}" class="btn-outline">What We Believe</a>
+      </div>
+
+      {% include blahaj-explainer.html %}
     </div>
   </div>
 
+  <!-- ===== WHAT WE BELIEVE PREVIEW ===== -->
   <section class="home-section">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2>Our Mission</h2>
-          <p>The mission of the Blahaj Church is to create a welcoming and inclusive community that supports the spiritual growth and well-being of all individuals who identify as transgender, gender non-conforming, and/or non-binary. We seek to foster a sense of belonging and acceptance, where members can freely explore and express their gender identity without fear of discrimination or prejudice.</p>
-          <p>We are committed to promoting social justice, advocating for the rights and dignity of transgender individuals, and creating positive change in the wider community. Our ultimate goal is to create a world where all individuals, regardless of gender identity, are treated with respect, dignity, and equality.</p>
-        </div>
+      <h2>What We Believe</h2>
+      <p class="section-subtitle">From the sacredness of gender diversity to the holiness of bodily autonomy, these are our core affirmations.</p>
+      <div class="belief-grid">
+        {% assign featured = "Sacredness of Gender Diversity,Love is Love,Safety,Informed Consent" | split: "," %}
+        {% for teaching in site.data.teachings %}
+          {% if featured contains teaching.title %}
+          <div class="belief-card">
+            <div class="belief-icon {% cycle 'pink-tint', 'blue-tint', 'pink-tint', 'blue-tint' %}">
+              <i class="fas fa-{{ teaching.icon }}"></i>
+            </div>
+            <h3>{{ teaching.title }}</h3>
+            <p>{{ teaching.summary }}</p>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="section-link">
+        <a href="{{ '/about' | relative_url }}">Explore all 14 teachings <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
 
+  <!-- ===== COMMUNITY LIFE PREVIEW ===== -->
   <section class="home-section alt-bg">
     <div class="container">
-      <h2>Our Core Beliefs</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <h3>Sacredness of Gender Diversity</h3>
-          <p>We recognize and honor the diversity of gender identities and expressions as sacred and valuable. All trans*, intersex, and gender non-conforming individuals are created in the image of the divine.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h3>Love is Love</h3>
-          <p>We recognize and celebrate all consenting adult relationships, regardless of gender. Everyone has the right to love and be loved without discrimination.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h3>Community & Safety</h3>
-          <p>Because this community has historically been marginalized, we believe that taking time to improve one's safety is a sacred act of self love. We foster connection and mutual support.</p>
-        </div>
+      <h2>Community Life</h2>
+      <p class="section-subtitle">We are not just a set of beliefs. We are people who gather, celebrate, and care for one another.</p>
+      <div class="community-preview">
+        <ul class="gathering-list">
+          <li class="gathering-item">
+            <div class="gathering-icon"><i class="fas fa-hands"></i></div>
+            <div>
+              <h4>Monthly Worship</h4>
+              <p>In-person gatherings in the Bay Area with reflection, community check-in, sermon, and blessing.</p>
+            </div>
+          </li>
+          <li class="gathering-item">
+            <div class="gathering-icon"><i class="fas fa-video"></i></div>
+            <div>
+              <h4>Weekly Virtual Hangouts</h4>
+              <p>Online gatherings for connection and support, wherever you are.</p>
+            </div>
+          </li>
+          <li class="gathering-item">
+            <div class="gathering-icon"><i class="fas fa-wrench"></i></div>
+            <div>
+              <h4>Quarterly Gear Days</h4>
+              <p>Safety gear repair, knowledge sharing, and building mutual protection together.</p>
+            </div>
+          </li>
+          <li class="gathering-item">
+            <div class="gathering-icon"><i class="fas fa-motorcycle"></i></div>
+            <div>
+              <h4>Motorcycle Pilgrimages</h4>
+              <p>Monthly rides celebrating freedom and self-expression on the open road.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="section-link">
+        <a href="{{ '/community' | relative_url }}">See our full community life <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== YOU ARE WELCOME HERE ===== -->
+  {% include invitation-block.html %}
+
+  <!-- ===== GET INVOLVED ===== -->
+  <section class="home-section">
+    <div class="container">
+      <h2>Get Involved</h2>
+      <p class="section-subtitle">There are many ways to be part of what we are building.</p>
+      <div class="involve-grid">
+        <a href="mailto:{{ site.email }}" class="involve-card">
+          <div class="involve-icon"><i class="fas fa-envelope"></i></div>
+          <h4>Join the Mailing List</h4>
+          <p>Receive gathering details and community updates.</p>
+        </a>
+        <a href="{{ '/community' | relative_url }}" class="involve-card">
+          <div class="involve-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h4>Attend a Gathering</h4>
+          <p>Join us monthly in the Bay Area or weekly online.</p>
+        </a>
+        <a href="{{ '/get-involved' | relative_url }}" class="involve-card">
+          <div class="involve-icon"><i class="fas fa-hands-helping"></i></div>
+          <h4>Volunteer</h4>
+          <p>Help build and shape this community.</p>
+        </a>
+        <a href="{{ '/resources' | relative_url }}" class="involve-card">
+          <div class="involve-icon"><i class="fas fa-book-open"></i></div>
+          <h4>Explore Resources</h4>
+          <p>Crisis support, legal aid, and community links.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PULL QUOTE ===== -->
+  <section class="pull-quote-section">
+    <div class="container">
+      <div class="pull-quote">
+        <blockquote>Our continued existence is an act of faith and of resistance.</blockquote>
+        <cite>From the closing of worship</cite>
       </div>
     </div>
   </section>

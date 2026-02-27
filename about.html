@@ -1,88 +1,358 @@
 ---
 layout: page
-title: About
+title: What We Believe
 permalink: /about/
 ---
 
-<h2>Mission Statement</h2>
+<style>
+/* --- Mission & Foundation --- */
+.mission-statement {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-medium);
+  max-width: 720px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
 
-<p>The mission of the Blahaj Church is to create a welcoming and inclusive community that supports the spiritual growth and well-being of all individuals who identify as transgender, gender non-conforming, and/or non-binary. We seek to foster a sense of belonging and acceptance, where members can freely explore and express their gender identity without fear of discrimination or prejudice. We are committed to promoting social justice, advocating for the rights and dignity of transgender individuals, and creating positive change in the wider community. Our ultimate goal is to create a world where all individuals, regardless of gender identity, are treated with respect, dignity, and equality.</p>
+.theological-foundation {
+  color: var(--text-medium);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
 
-<h2>Church Teachings</h2>
+.theological-foundation a {
+  font-weight: 600;
+}
 
-<p>The Blahaj Church holds that gender diversity is not an accident, a disorder, or a deviation &ndash; it is a reflection of the divine. Across cultures and throughout history, those who transcend the boundaries of gender have been recognized as sacred: the Two-Spirit people of Indigenous North America, the hijra of South Asia, the Galli priests of ancient Rome, the six genders named in the Talmud. The Blahaj Church stands in this ancient tradition, affirming that trans, gender non-conforming, and intersex individuals are created in the image of the divine and that their existence carries inherent spiritual meaning.</p>
+/* --- Blahaj Explainer (page context) --- */
+.blahaj-explainer {
+  max-width: 640px;
+  margin: 0 auto 40px;
+  background: var(--bg-light);
+  border: 1px solid rgba(138, 203, 239, 0.25);
+  border-radius: 16px;
+  padding: 24px 28px;
+  text-align: left;
+}
 
-<p>From this theological foundation, the church holds the following teachings:</p>
+.blahaj-explainer h3 {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+}
 
-<h3>Sacredness of Gender Diversity</h3>
-<p>The Blahaj Church recognizes and honors the diversity of gender identities and expressions as sacred and valuable. We believe that all trans*, intersex, and gender non-conforming individuals are created in the image of the divine.</p>
+.blahaj-explainer h3 i {
+  margin-right: 6px;
+}
 
-<h3>Hormone Replacement Therapy</h3>
-<p>The Blahaj Church believes in the importance of Hormone Replacement Therapy (HRT) for those who desire it. We recognize that HRT can be a crucial tool in helping individuals live and present in their congruent gender(s).</p>
+.blahaj-explainer p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-medium);
+  margin: 0;
+}
 
-<h3>Puberty Blockers</h3>
-<p>The Blahaj Church recognizes the value of puberty blockers for young people who are experiencing gender dysphoria. We believe that puberty blockers can help alleviate the distress caused by the incongruence between one's gender identity and the changes that occur during puberty.</p>
+.blahaj-explainer em {
+  color: var(--text-light);
+  font-size: 13px;
+}
 
-<h3>Holy Rituals</h3>
-<p>The Blahaj Church holds holy rituals that include taking HRT. We believe that these rituals are a powerful way to affirm and celebrate the sacredness of transgender, gender non-conforming, and intersex individuals.</p>
+/* --- Disclaimer Banner --- */
+.disclaimer-banner {
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin-bottom: 48px;
+}
 
-<h3>Welcoming All</h3>
-<p>The Blahaj Church welcomes all who venerate and accept the sacredness of trans/gender non conforming/intersex folks. We believe that everyone, regardless of their gender identity or expression, has a place in our community.</p>
+.disclaimer-banner p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-medium);
+}
 
-<h3>Living and Presenting in Congruent Gender(s)</h3>
-<p>The Blahaj Church recognizes that living and presenting in one's congruent gender(s) can be an important aspect of an individual's gender affirmation journey. We support individuals in their efforts to present and be perceived in their desired gender(s), and we strive to create a community that celebrates and affirms gender diversity in all its forms.</p>
+.disclaimer-banner i {
+  color: #f9a825;
+  margin-right: 6px;
+}
 
-<h3>Safety</h3>
-<p>Because this community has historically been marginalized it is important to take actions to protect oneself and the community. We believe that taking time to improve one's safety is a sacred act of self love.</p>
+/* --- Teaching Groups --- */
+.teaching-group {
+  margin-bottom: 48px;
+}
 
-<h3>Right of Self-Determination</h3>
-<p>We strongly believe in the fundamental human right of self-determination, especially regarding gender identity, expression and bodily autonomy. We recognize that gender is a complex and multifaceted aspect of human identity and that individuals have the right to express their gender in a way that is true to themselves, regardless of societal norms and expectations.</p>
+.teaching-group-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--pink);
+}
 
-<h3>Facility Access</h3>
-<p>The Blahaj Church believes in the right of every individual to access gender-segregated facilities and services that correspond to their gender identity. Transgender, gender non-conforming, and intersex individuals should have the right to use the bathroom, locker room, and other facilities that align with their gender identity without fear of discrimination or harassment.</p>
+.teaching-group-title i {
+  color: var(--pink-dark);
+  margin-right: 10px;
+}
 
-<h3>Participation in Sport</h3>
-<p>Individuals should have the right to participate in sports that align with their gender identity. Transgender and gender non-conforming individuals should not be excluded from participating in sports based solely on their gender identity. Any restrictions on participation should be based on factors such as skill level, age, or other relevant criteria, rather than gender identity.</p>
+/* --- Teaching Cards (details/summary) --- */
+.teaching-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #fff;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
 
-<h3>Informed Consent</h3>
-<p>We believe that for matters of one's body one should have the freedom to choose what procedures one undergoes (including but not limited to gender confirmation, and abortion).</p>
+.teaching-card:hover {
+  border-color: var(--pink-light);
+  box-shadow: 0 2px 12px rgba(246, 168, 182, 0.12);
+}
 
-<h3>Sexual Health</h3>
-<p>The Blahaj Church believes that everyone has the right to enjoy their sexuality safely and responsibly. We support the use of safer sex practices, including condoms, PrEP, and other methods, to help prevent the spread of sexually transmitted infections. We believe that everyone should have access to quality healthcare, including sexual health care.</p>
+.teaching-card summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  list-style: none;
+  position: relative;
+}
 
-<h3>Right to Abortion</h3>
-<p>The decision to bring life into the world is a sacred one, and should be made with careful consideration. If a pregnant person chooses to have an abortion, they should be able to do so in a safe and supportive environment. There should be no shame or stigma attached to abortion, and pregnant people should be able to make this decision without fear of judgment.</p>
+.teaching-card summary::-webkit-details-marker {
+  display: none;
+}
 
-<h3>Love is Love</h3>
-<p>At the Blahaj Church, we believe that love is love. We recognize and celebrate all consenting adult relationships, regardless of gender. We believe that everyone has the right to love and be loved, and we do not discriminate based on sexual orientation or gender identity. Any ordained minister of the Blahaj Church may solemnize marriages, commitment ceremonies, and weddings for all genders who wish to publicly declare their love and commitment to each other.</p>
+.teaching-card summary::marker {
+  display: none;
+  content: '';
+}
 
-<p>As a community, we strive to create a safe and welcoming space, especially for those who have been marginalized or excluded from other religious institutions. We believe that by affirming the sacredness of gender diversity, we can help create a more just and compassionate world.</p>
+/* Chevron indicator */
+.teaching-card summary::after {
+  content: '\f054';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 12px;
+  color: var(--text-light);
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
 
-<h2>History of Our Name</h2>
+.teaching-card[open] summary::after {
+  transform: rotate(90deg);
+  color: var(--pink-dark);
+}
 
-<p>The Blahaj Church takes its name from the Swedish word for "shark," which is also the name of a popular stuffed animal known as the "IKEA shark" or "Blahaj." While the name may seem unconventional for a church, it has deep symbolic meaning for the congregation.</p>
+.teaching-card[open] summary {
+  border-bottom: 1px solid #eee;
+}
 
-<p>The Blahaj has become a symbol of support for trans folks, particularly online during the covid lockdowns, where the toy has gained a following among individuals who identify as gender non-conforming/trans/intersex. Many individuals have shared photos and stories of their Blahaj sharks on social media, using the toy as a way to express their gender identity and to find support within the trans community.</p>
+/* Icon circle */
+.teaching-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: var(--pink-light);
+  color: var(--pink-dark);
+  font-size: 16px;
+}
 
-<p>For the Blahaj Church, the name represents a powerful symbol of support and affirmation for gender non-conforming/trans/intersex individuals. By adopting the name of this beloved toy, the church is sending a message that it is a safe and welcoming space for individuals who may feel marginalized or excluded in traditional religious settings.</p>
+/* Title and summary text */
+.teaching-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
 
-<h3>No Affiliation with IKEA</h3>
-<p>Blahaj Church is an independent religious organization and is not affiliated with or endorsed by IKEA. The use of the Blahaj name and likeness is solely for the purpose of symbolizing support for the trans community and does not imply any endorsement or partnership with IKEA.</p>
+.teaching-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-dark);
+}
 
-<h2>Religious History</h2>
+.teaching-summary {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
 
-<p>The Blahaj Church exists within a long, rich lineage of cultures and faiths that have recognized the sacredness of gender diversity. From the Two-Spirit people of Indigenous North America to the hijra of South Asia, from the Galli priests of Cybele in ancient Rome to the six genders of the Talmud &ndash; the honoring of individuals who transcend gender boundaries is not new. It is among the oldest spiritual traditions on earth.</p>
+/* Body content */
+.teaching-body {
+  padding: 20px 24px;
+}
 
-<p>What is new is the tools we have. Hormone replacement therapy allows individuals to align their bodies with their lived gender in ways our ancestors could achieve only through prayer, ritual, and communal recognition. The Blahaj Church holds that HRT is a sacred act &ndash; the modern expression of an ancient truth.</p>
+.teaching-body p {
+  margin: 0;
+  color: var(--text-medium);
+  line-height: 1.8;
+}
 
-<p><a href="{{ '/history' | relative_url }}" class="btn-pill">Read Our Full Sacred History</a></p>
+/* --- Bottom CTA --- */
+.beliefs-cta {
+  text-align: center;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 2px solid var(--pink);
+}
 
-<h2>Political Activity</h2>
+.beliefs-cta p {
+  font-size: 18px;
+  color: var(--text-medium);
+  margin-bottom: 20px;
+}
 
-<p>The Blahaj Church does not participate in or intervene in any political campaign on behalf of or in opposition to any candidate for public office. The church does not endorse candidates, make contributions to political campaigns, or publish statements of position for or against any candidate. This policy applies to all officers, ministers, and representatives of the church acting in their official capacity.</p>
+/* --- Responsive --- */
+@media (max-width: 767px) {
+  .mission-statement {
+    font-size: 16px;
+    text-align: left;
+  }
 
-<p>The church may engage in issue-based advocacy and education consistent with its religious mission, including advocacy for the rights and well-being of transgender, gender non-conforming, and intersex individuals.</p>
+  .teaching-card summary {
+    padding: 16px 18px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
 
-<h2>Becoming a Congregant</h2>
+  .teaching-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 14px;
+  }
 
-<p>While no formal registration with the Blahaj Church is required, folks are encouraged to register. One can register by either emailing the church or joining the mailing list. As a community that embraces the divine nature of trans folks, the congregation is open to all who share in our values of love, acceptance, and support. We welcome anyone who wishes to join us in celebrating the beauty of trans identity and working towards a world where trans individuals are fully accepted and valued.</p>
+  .teaching-title {
+    font-size: 15px;
+  }
+
+  .teaching-summary {
+    font-size: 13px;
+  }
+
+  .teaching-body {
+    padding: 16px 18px;
+  }
+
+  .blahaj-explainer {
+    padding: 20px;
+  }
+}
+</style>
+
+<p class="mission-statement">
+  We are a welcoming spiritual community that affirms the sacredness of transgender, gender non-conforming, and intersex lives. We exist to foster belonging, celebrate gender diversity, and support every person's journey toward living authentically.
+</p>
+
+<h2>Our Theological Foundation</h2>
+
+<p class="theological-foundation">
+  We hold that gender diversity is not an accident, a disorder, or a deviation &mdash; it is a reflection of the divine. Across cultures and throughout history, those who transcend the boundaries of gender have been recognized as sacred: the Two-Spirit people of Indigenous North America, the hijra of South Asia, the Galli priests of ancient Rome, the six genders named in the Talmud. We stand in this ancient tradition, affirming that trans, gender non-conforming, and intersex individuals carry inherent spiritual meaning. For the full scholarly treatment, <a href="{{ '/history/' | relative_url }}">explore our Sacred History</a>.
+</p>
+
+{% include blahaj-explainer.html %}
+
+{% include disclaimer-banner.html %}
+
+<h2>Our Teachings</h2>
+
+<div class="teaching-group">
+  <h3 class="teaching-group-title"><i class="fas fa-star"></i> The Sacred Body</h3>
+  {% for teaching in site.data.teachings %}
+    {% if teaching.group == "The Sacred Body" %}
+    <details class="teaching-card">
+      <summary>
+        <span class="teaching-icon"><i class="fas fa-{{ teaching.icon }}"></i></span>
+        <span class="teaching-text">
+          <span class="teaching-title">{{ teaching.title }}</span>
+          <span class="teaching-summary">{{ teaching.summary }}</span>
+        </span>
+      </summary>
+      <div class="teaching-body">
+        <p>{{ teaching.body }}</p>
+      </div>
+    </details>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="teaching-group">
+  <h3 class="teaching-group-title"><i class="fas fa-hands"></i> Holy Practice</h3>
+  {% for teaching in site.data.teachings %}
+    {% if teaching.group == "Holy Practice" %}
+    <details class="teaching-card">
+      <summary>
+        <span class="teaching-icon"><i class="fas fa-{{ teaching.icon }}"></i></span>
+        <span class="teaching-text">
+          <span class="teaching-title">{{ teaching.title }}</span>
+          <span class="teaching-summary">{{ teaching.summary }}</span>
+        </span>
+      </summary>
+      <div class="teaching-body">
+        <p>{{ teaching.body }}</p>
+      </div>
+    </details>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="teaching-group">
+  <h3 class="teaching-group-title"><i class="fas fa-heart"></i> Love and Justice</h3>
+  {% for teaching in site.data.teachings %}
+    {% if teaching.group == "Love and Justice" %}
+    <details class="teaching-card">
+      <summary>
+        <span class="teaching-icon"><i class="fas fa-{{ teaching.icon }}"></i></span>
+        <span class="teaching-text">
+          <span class="teaching-title">{{ teaching.title }}</span>
+          <span class="teaching-summary">{{ teaching.summary }}</span>
+        </span>
+      </summary>
+      <div class="teaching-body">
+        <p>{{ teaching.body }}</p>
+      </div>
+    </details>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="teaching-group">
+  <h3 class="teaching-group-title"><i class="fas fa-medkit"></i> Health and Wholeness</h3>
+  {% for teaching in site.data.teachings %}
+    {% if teaching.group == "Health and Wholeness" %}
+    <details class="teaching-card">
+      <summary>
+        <span class="teaching-icon"><i class="fas fa-{{ teaching.icon }}"></i></span>
+        <span class="teaching-text">
+          <span class="teaching-title">{{ teaching.title }}</span>
+          <span class="teaching-summary">{{ teaching.summary }}</span>
+        </span>
+      </summary>
+      <div class="teaching-body">
+        <p>{{ teaching.body }}</p>
+      </div>
+    </details>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="beliefs-cta">
+  <p>Our faith stands in the oldest spiritual traditions on earth.</p>
+  <a href="{{ '/history/' | relative_url }}" class="btn-pill">Explore the Sacred History of Gender Diversity</a>
+</div>

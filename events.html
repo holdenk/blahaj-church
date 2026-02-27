@@ -7,65 +7,37 @@ hide_cta: false
 
 <h2>Where We Meet</h2>
 
-<p>The Blahaj Church gathers monthly in the San Francisco Bay Area, alternating between Oakland (East Bay) and the greater San Francisco area (West Bay) so that congregants from across the region can participate. The specific meeting location is shared with congregants by email in advance of each gathering. Because the congregation is small and faces real security concerns due to anti-trans hostility, we do not publish the exact address publicly.</p>
+<p>We gather monthly in the San Francisco Bay Area, alternating between Oakland (East Bay) and the greater San Francisco area (West Bay) so that congregants from across the region can participate. We also meet weekly online for virtual worship.</p>
 
-<p>To receive meeting details, <a href="{{ '/contact' | relative_url }}">join our mailing list</a>.</p>
+{% include safety-notice.html %}
 
-<h2>Recurring Worship Schedule</h2>
-
-<p>The Blahaj Church holds regular acts of worship throughout the year. All members and prospective congregants are welcome.</p>
-
-<div class="goals-list">
-  <div class="goal-item">
-    <h3>Monthly: Worship Gathering</h3>
-    <p>The congregation's primary worship service, held monthly in the Bay Area. Includes an opening reflection, community check-in, sermon, optional HRT Communion, prayers, and closing blessing. See <a href="{{ '/acts-of-worship' | relative_url }}">Acts of Worship</a> for the full order of service.</p>
-  </div>
-
-  <div class="goal-item">
-    <h3>Weekly: Virtual Shot Hangout</h3>
-    <p>Members who inject hormone replacement therapy gather virtually to take their sacred HRT in the company of fellow congregants. A weekly ritual of community, support, and affirmation. Open to all members.</p>
-  </div>
-
-  <div class="goal-item">
-    <h3>Periodic: HRT Communion</h3>
-    <p>In-person celebrations where members come together to take their HRT as a communal, sacred act. A joyful gathering of affirmation and fellowship.</p>
-  </div>
-
-  <div class="goal-item">
-    <h3>Quarterly: Gear Day</h3>
-    <p>Members gather to repair and maintain safety gear, share equipment, and discuss safety practices for living as trans, gender non-conforming, or intersex individuals.</p>
-  </div>
-
-  <div class="goal-item">
-    <h3>Periodic: Bath / Spa Days</h3>
-    <p>Communal bathing and self-care gatherings held in a safe, affirming environment. A ritual of sacred self-care and bodily celebration.</p>
-  </div>
-
-  <div class="goal-item">
-    <h3>Monthly: Motorcycle Pilgrimage to Alice's</h3>
-    <p>A monthly group ride to Alice's Restaurant in the Bay Area, organized through the affiliated Sparkling Pink Pandas. An act of worship celebrating freedom and self-expression. Non-riders welcome to meet at the destination.</p>
-  </div>
-</div>
-
-<h2>Annual Observances</h2>
-
-<div class="goals-list">
-  <div class="goal-item">
-    <h3>November 20: Trans Day of Remembrance</h3>
-    <p>A candlelight vigil and memorial service honoring the lives lost to transphobic violence. The First Minister delivers a sermon and members share reflections in communal remembrance.</p>
-  </div>
-
-  <div class="goal-item">
-    <h3>March 31: Trans Day of Visibility</h3>
-    <p>A day of celebration and empowerment with sermons, social events, and community gatherings. Members wear trans flag colors and engage in acts of allyship and activism.</p>
-  </div>
-
-  <div class="goal-item">
-    <h3>June: SF Pride and Trans March</h3>
-    <p>The church participates in San Francisco Pride through the affiliated Sparkling Pink Pandas, with marching and community support.</p>
-  </div>
-</div>
+<p>To receive meeting details, <a href="mailto:{{ site.email }}">join our mailing list</a>.</p>
 
 <h2>Upcoming Events</h2>
 
-<p>Specific dates and details for upcoming events will be posted here. To stay informed, <a href="{{ '/contact' | relative_url }}">contact us</a> to join our mailing list.</p>
+<p>Specific dates and details for upcoming events will be posted here. To stay informed, email us at <a href="mailto:{{ site.email }}">{{ site.email }}</a> to join our mailing list.</p>
+
+<h2>Our Full Schedule</h2>
+
+<p>For a complete look at how we gather &ndash; monthly worship, weekly hangouts, quarterly gear days, annual observances, and motorcycle pilgrimages &ndash; visit our <a href="{{ '/community' | relative_url }}">Community Life</a> page.</p>
+
+<style>
+.safety-notice {
+  background: rgba(138, 203, 239, 0.1);
+  border: 1px solid rgba(138, 203, 239, 0.3);
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+  color: var(--text-medium);
+}
+
+.safety-notice i {
+  color: var(--blue-dark);
+  margin-right: 6px;
+}
+
+.safety-notice a {
+  font-weight: 500;
+}
+</style>

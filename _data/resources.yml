@@ -1,0 +1,79 @@
+- name: Trans Lifeline
+  url: https://translifeline.org/
+  description: A grassroots hotline and microgrants organization offering direct emotional and financial support to trans people in crisis. Run by and for trans people.
+  category: Crisis Support
+  featured: true
+  phone: (877) 565-8860
+
+- name: 988 Suicide & Crisis Lifeline
+  url: https://988lifeline.org/
+  description: Free, confidential 24/7 support for people in distress. Call or text 988.
+  category: Crisis Support
+  phone: "988"
+
+- name: The Trevor Project
+  url: https://www.thetrevorproject.org/
+  description: Crisis intervention and suicide prevention for LGBTQ+ young people. Call, text, or chat.
+  category: Crisis Support
+  phone: (866) 488-7386
+
+- name: Crisis Text Line
+  url: https://www.crisistextline.org/
+  description: Free crisis counseling via text message. Text HOME to 741741.
+  category: Crisis Support
+  phone: Text HOME to 741741
+
+- name: Transgender Law Center
+  url: https://transgenderlawcenter.org/
+  description: The largest national trans-led organization advocating for the rights of transgender and gender nonconforming people.
+  category: Legal Aid
+
+- name: Lambda Legal
+  url: https://www.lambdalegal.org/
+  description: A national organization committed to achieving full recognition of the civil rights of LGBTQ+ people and those living with HIV through litigation and advocacy.
+  category: Legal Aid
+
+- name: ACLU - Transgender Rights
+  url: https://www.aclu.org/issues/lgbtq-rights/transgender-rights
+  description: The ACLU works to ensure that trans people can live safely and authentically, with resources on legal rights and advocacy.
+  category: Legal Aid
+
+- name: WPATH (World Professional Association for Transgender Health)
+  url: https://www.wpath.org/
+  description: An international, interdisciplinary professional association promoting evidence-based care for transgender and gender diverse people.
+  category: Medical
+
+- name: Planned Parenthood
+  url: https://www.plannedparenthood.org/learn/gender-identity/transgender
+  description: Many Planned Parenthood locations offer gender-affirming hormone therapy on an informed consent basis.
+  category: Medical
+
+- name: FOLX Health
+  url: https://www.folxhealth.com/
+  description: Virtual healthcare for the LGBTQ+ community, including hormone therapy via telehealth.
+  category: Medical
+
+- name: Trans Bodies, Trans Selves
+  url: https://transbodies.com/
+  description: A comprehensive, affirming guide by and for trans people, covering health, legal issues, relationships, and more. Required reading for Blahaj Church ministerial training.
+  category: Reading
+
+- name: National Center for Transgender Equality
+  url: https://transequality.org/
+  description: Advocates for policy changes to advance transgender equality, with resources on legal rights, ID documents, and more.
+  category: Legal Aid
+
+- name: Transgender District (San Francisco)
+  url: https://www.transgenderdistrictsf.com/
+  description: The world's first legally recognized transgender cultural district, based in San Francisco's Tenderloin neighborhood.
+  category: Mutual Aid
+
+- name: TGI Justice Project
+  url: https://tgijp.org/
+  description: A group of transgender, gender variant, and intersex people creating a united family in the struggle for survival and freedom.
+  category: Mutual Aid
+
+- name: EFF Surveillance Self-Defense
+  url: https://ssd.eff.org/
+  description: Tips, tools, and how-tos for safer online communications from the Electronic Frontier Foundation.
+  category: Safety

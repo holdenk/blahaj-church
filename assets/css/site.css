@@ -32,7 +32,7 @@
   --trans-white: #ffffff;
   --text-dark: #333333;
   --text-medium: #555555;
-  --text-light: #888888;
+  --text-light: #666666;
   --bg-light: #f9f9f9;
   --font-heading: 'Copperplate Gothic', 'Copperplate', 'Georgia', serif;
   --font-body: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
@@ -119,13 +119,13 @@ img {
 
 .nav-menu li a {
   display: block;
-  padding: 14px 28px;
+  padding: 14px 18px;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--text-medium);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   transition: color 0.2s, background 0.2s;
 }
 
@@ -612,6 +612,129 @@ img {
 
   .footer-col {
     margin-bottom: 30px;
+  }
+}
+
+/* --- Skip Link --- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--pink-dark);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 8px;
+  color: #fff;
+  outline: 3px solid var(--blue-dark);
+  outline-offset: 2px;
+}
+
+/* --- Focus Visible --- */
+:focus-visible {
+  outline: 3px solid var(--blue-dark);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--blue-dark);
+  outline-offset: 2px;
+}
+
+/* --- Disclaimer Banner --- */
+.disclaimer-banner {
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 24px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.disclaimer-banner p {
+  margin: 0;
+  color: #92400e;
+}
+
+.disclaimer-banner i {
+  color: #d97706;
+  margin-right: 6px;
+}
+
+/* --- Safety Notice --- */
+.safety-notice {
+  background: rgba(138, 203, 239, 0.1);
+  border: 1px solid rgba(138, 203, 239, 0.3);
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+  color: var(--text-medium);
+}
+
+.safety-notice i {
+  color: var(--blue-dark);
+  margin-right: 6px;
+}
+
+.safety-notice a {
+  font-weight: 500;
+}
+
+/* --- Blahaj Explainer (default/page context) --- */
+.page-content .blahaj-explainer {
+  background: var(--bg-light);
+  border: 1px solid rgba(138, 203, 239, 0.25);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+
+.page-content .blahaj-explainer h3 {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.page-content .blahaj-explainer p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* --- Footer Disclaimer --- */
+.footer-disclaimer {
+  padding: 12px 0;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.footer-disclaimer-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin: 0;
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

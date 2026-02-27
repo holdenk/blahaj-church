@@ -1,0 +1,490 @@
+---
+layout: page
+title: Community Life
+permalink: /community/
+---
+
+<style>
+/* --- Worship Timeline --- */
+.worship-timeline {
+  position: relative;
+  padding-left: 48px;
+  margin: 30px 0 40px;
+}
+
+.worship-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--trans-pink), var(--trans-blue));
+  border-radius: 2px;
+}
+
+.timeline-step {
+  position: relative;
+  padding: 16px 0 24px 24px;
+}
+
+.timeline-step:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-step .step-icon {
+  position: absolute;
+  left: -38px;
+  top: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--pink-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pink-dark);
+  font-size: 16px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 1;
+}
+
+.timeline-step h4 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.timeline-step p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+/* --- Activity Grid --- */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 24px 0 40px;
+}
+
+.activity-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.activity-card .activity-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink-light), var(--blue-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pink-dark);
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.activity-card h3 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dark);
+  margin: 0 0 10px;
+}
+
+.activity-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.activity-card .card-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--pink-dark);
+  background: var(--pink-light);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+/* --- Observance Cards --- */
+.observance-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 24px 0 40px;
+}
+
+.observance-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.observance-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.observance-card .observance-date {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--blue-dark);
+  background: var(--blue-light);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.observance-card h3 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dark);
+  margin: 0 0 10px;
+}
+
+.observance-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.observance-card .observance-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-light), var(--pink-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-dark);
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* --- Affiliation Section --- */
+.affiliation-section {
+  background: var(--bg-light);
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin: 30px 0 40px;
+  border-left: 4px solid var(--pink);
+}
+
+.affiliation-section h3 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dark);
+  margin: 0 0 12px;
+}
+
+.affiliation-section p {
+  margin: 0 0 12px;
+  color: var(--text-medium);
+  line-height: 1.7;
+}
+
+.affiliation-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Community CTA --- */
+.community-cta {
+  text-align: center;
+  padding: 40px 0 10px;
+}
+
+.community-cta p {
+  font-size: 18px;
+  color: var(--text-medium);
+  margin-bottom: 20px;
+}
+
+/* --- Disclaimer & Safety Notice Styles --- */
+.disclaimer-banner {
+  background: var(--pink-light);
+  border: 1px solid var(--pink);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 30px 0;
+}
+
+.disclaimer-banner p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.disclaimer-banner i {
+  color: var(--pink-dark);
+  margin-right: 4px;
+}
+
+.safety-notice {
+  background: var(--blue-light);
+  border: 1px solid var(--blue);
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin: 16px 0;
+}
+
+.safety-notice p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.safety-notice i {
+  color: var(--blue-dark);
+  margin-right: 4px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767px) {
+  .worship-timeline {
+    padding-left: 40px;
+  }
+
+  .worship-timeline::before {
+    left: 16px;
+  }
+
+  .timeline-step .step-icon {
+    left: -34px;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .activity-grid,
+  .observance-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .activity-card,
+  .observance-card {
+    padding: 22px 20px;
+  }
+
+  .affiliation-section {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .worship-timeline {
+    padding-left: 36px;
+  }
+
+  .timeline-step {
+    padding-left: 20px;
+  }
+
+  .timeline-step .step-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+    left: -30px;
+  }
+}
+</style>
+
+<!-- ======================================== -->
+<!-- Section 1: How We Gather                 -->
+<!-- ======================================== -->
+
+<h2>How We Gather</h2>
+
+<p>Community is at the heart of everything we do. The Blahaj Church gathers in a rhythm that keeps us connected, cared for, and grounded in our shared faith: monthly in-person worship in the San Francisco Bay Area, weekly virtual gatherings, quarterly gear days, and annual observances that mark the sacred moments of our calendar.</p>
+
+<p>Whether you join us on a motorcycle ride, over a video call, or at our monthly service, you are part of this community. We meet in rotating locations across the Bay Area &ndash; alternating between Oakland (East Bay) and the greater San Francisco area (West Bay) &ndash; so that congregants across the region can participate.</p>
+
+{% include safety-notice.html %}
+
+<!-- ======================================== -->
+<!-- Section 2: Monthly Worship Gathering     -->
+<!-- ======================================== -->
+
+<h2>Monthly Worship Gathering</h2>
+
+<p>Our monthly service is the heartbeat of the congregation. Here is what a typical gathering looks like:</p>
+
+<div class="worship-timeline">
+  <div class="timeline-step">
+    <div class="step-icon"><i class="fas fa-door-open"></i></div>
+    <h4>Gathering</h4>
+    <p>We arrive, greet one another, and reconnect. This is fellowship time &ndash; catching up, sharing a meal, and settling in together.</p>
+  </div>
+
+  <div class="timeline-step">
+    <div class="step-icon"><i class="fas fa-book-open"></i></div>
+    <h4>Opening Reflection</h4>
+    <p>A reading from a sacred or foundational text, or a reflection on the month's theme, opens the service and centers us as a community.</p>
+  </div>
+
+  <div class="timeline-step">
+    <div class="step-icon"><i class="fas fa-hands-helping"></i></div>
+    <h4>Community Check-In</h4>
+    <p>We go around and share how we are doing. Are we safe? How is our health? Do we need gear or support? This is us caring for each other.</p>
+  </div>
+
+  <div class="timeline-step">
+    <div class="step-icon"><i class="fas fa-comment-alt"></i></div>
+    <h4>Sermon / Teaching</h4>
+    <p>A short teaching from the First Minister or a guest speaker. Topics range from theological reflections on the sacredness of gender diversity to practical wisdom for our lives.</p>
+  </div>
+
+  <div class="timeline-step">
+    <div class="step-icon"><i class="fas fa-heart"></i></div>
+    <h4>HRT Communion</h4>
+    <p>Those who choose to take their hormone replacement therapy do so together, as a sacred act of affirmation and joy. Participation is entirely voluntary; the church does not provide medications. Congregants who do not take HRT participate through presence and support.</p>
+  </div>
+
+  <div class="timeline-step">
+    <div class="step-icon"><i class="fas fa-pray"></i></div>
+    <h4>Prayers &amp; Intentions</h4>
+    <p>We hold space for prayers &ndash; for our community, for those facing hardship, for those we have lost, and for the wider world. Members may offer their own intentions.</p>
+  </div>
+
+  <div class="timeline-step">
+    <div class="step-icon"><i class="fas fa-sun"></i></div>
+    <h4>Closing Blessing</h4>
+    <p>A reminder that our very existence is an act of faith and resistance. We close with a blessing and carry that light into the world.</p>
+  </div>
+</div>
+
+<!-- ======================================== -->
+<!-- Disclaimer Banner                        -->
+<!-- ======================================== -->
+
+{% include disclaimer-banner.html %}
+
+<!-- ======================================== -->
+<!-- Section 3: Regular Activities            -->
+<!-- ======================================== -->
+
+<h2>Regular Activities</h2>
+
+<div class="activity-grid">
+  <div class="activity-card">
+    <div class="activity-icon"><i class="fas fa-heart"></i></div>
+    <span class="card-tag">Periodic</span>
+    <h3>HRT Communion</h3>
+    <p>Beyond our monthly service, we hold dedicated in-person HRT Communion celebrations &ndash; joyful gatherings where members come together to take their hormone replacement therapy as a communal, sacred act. We share a meal, support one another, and honor the transformative power of HRT in our lives. Participation is always voluntary.</p>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-icon"><i class="fas fa-video"></i></div>
+    <span class="card-tag">Weekly</span>
+    <h3>Virtual Shot Hangout</h3>
+    <p>Every week, members who inject their own prescribed HRT gather on a video call to do so together. It is a simple, powerful ritual &ndash; taking your shot in the company of people who understand what it means. Community support, a few laughs, and the comfort of not doing it alone.</p>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-icon"><i class="fas fa-wrench"></i></div>
+    <span class="card-tag">Quarterly</span>
+    <h3>Gear Day</h3>
+    <p>We gather quarterly to repair and maintain each other's safety gear, share equipment that no longer fits, and talk about safety practices. When the budget allows, new gear may be available. It is mutual aid in action &ndash; keeping each other safe, together.</p>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-icon"><i class="fas fa-spa"></i></div>
+    <span class="card-tag">Periodic</span>
+    <h3>Bath / Spa Days</h3>
+    <p>Communal self-care in a safe, affirming environment. For many of us, spa and bathing spaces can feel hostile or unsafe. Our spa days reclaim that experience &ndash; massage, skincare, and the simple comfort of communal bathing without fear. Every body is sacred and deserving of care.</p>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-icon"><i class="fas fa-motorcycle"></i></div>
+    <span class="card-tag">Monthly</span>
+    <h3>Motorcycle Pilgrimages</h3>
+    <p>Members who ride gather monthly for a group ride to Alice's Restaurant, a beloved Bay Area destination. Organized through our affiliation with the Sparkling Pink Pandas, these rides are acts of worship &ndash; celebrating freedom, self-expression, and the joy of the open road. Non-riders are welcome to meet us there.</p>
+  </div>
+</div>
+
+<!-- ======================================== -->
+<!-- Section 4: Annual Observances            -->
+<!-- ======================================== -->
+
+<h2>Annual Observances</h2>
+
+<p>Certain days hold special significance for our community. We mark them with intention, remembrance, and celebration.</p>
+
+<div class="observance-cards">
+  <div class="observance-card">
+    <div class="observance-icon"><i class="fas fa-candle-holder"></i></div>
+    <span class="observance-date">November 20</span>
+    <h3>Trans Day of Remembrance</h3>
+    <p>We gather for a candlelight vigil and memorial service, honoring and remembering the lives lost to transphobic violence. The First Minister delivers a sermon, and members share reflections in a space of communal grieving and resolve.</p>
+  </div>
+
+  <div class="observance-card">
+    <div class="observance-icon"><i class="fas fa-star"></i></div>
+    <span class="observance-date">March 31</span>
+    <h3>Trans Day of Visibility</h3>
+    <p>A day of celebration and empowerment. We gather for sermons, social events, and community activities. Members wear trans flag colors and engage in acts of allyship and activism &ndash; affirming that we are here, we are visible, and we are not going anywhere.</p>
+  </div>
+
+  <div class="observance-card">
+    <div class="observance-icon"><i class="fas fa-flag"></i></div>
+    <span class="observance-date">June</span>
+    <h3>SF Pride &amp; Trans March</h3>
+    <p>We participate in San Francisco Pride and the Trans March each June through our affiliation with the Sparkling Pink Pandas. Several congregants ride with the club, which provides traffic support to ensure the safety of all marchers and spectators. A visible act of solidarity and joy.</p>
+  </div>
+</div>
+
+<!-- ======================================== -->
+<!-- Section 6: Sparkling Pink Pandas         -->
+<!-- ======================================== -->
+
+<h2>Sparkling Pink Pandas</h2>
+
+<div class="affiliation-section">
+  <h3><i class="fas fa-motorcycle" style="color: var(--pink-dark); margin-right: 8px;"></i> Our Affiliation with SPP</h3>
+  <p>The Blahaj Church maintains a close affiliation with the <strong>Sparkling Pink Pandas</strong> (SPP), a trans-focused motorcycle and scooter group based in San Francisco. SPP is not a ministry of the church &ndash; it is an independent community organization with its own history and mission &ndash; but we share members, values, and a deep commitment to the safety and visibility of trans people.</p>
+  <p>Our monthly motorcycle pilgrimages are organized through SPP, and we march together at SF Pride and the Trans March each June. The relationship between the church and the Pandas is one of mutual respect and shared purpose: two communities, side by side, looking out for each other.</p>
+</div>
+
+<!-- ======================================== -->
+<!-- Section 7: CTA                           -->
+<!-- ======================================== -->
+
+<div class="community-cta">
+  <p>We would love to have you with us.</p>
+  <a href="{{ '/get-involved' | relative_url }}" class="btn-pill">Join Us</a>
+</div>

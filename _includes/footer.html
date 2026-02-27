@@ -1,4 +1,4 @@
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
   <div class="footer-main">
     <div class="container">
       <div class="row">
@@ -9,36 +9,34 @@
               <img src="{{ '/assets/img/logo-white.png' | relative_url }}" alt="Blahaj Church" class="footer-logo">
             </a>
           </div>
-          <h4>Links</h4>
+          <h4>About</h4>
           <ul class="footer-links">
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/about' | relative_url }}">About</a></li>
-            <li><a href="{{ '/who-we-are' | relative_url }}">Who We Are</a></li>
-            <li><a href="{{ '/events' | relative_url }}">Events</a></li>
-            <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+            <li><a href="{{ '/about' | relative_url }}">What We Believe</a></li>
+            <li><a href="{{ '/who-we-are' | relative_url }}">Our Story</a></li>
+            <li><a href="{{ '/history' | relative_url }}">Sacred History</a></li>
+            <li><a href="{{ '/church-goals' | relative_url }}">Church Goals</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-4 footer-col">
-          <h4>About Blahaj</h4>
+          <h4>Community</h4>
           <ul class="footer-links">
+            <li><a href="{{ '/community' | relative_url }}">Community Life</a></li>
             <li><a href="{{ '/governance' | relative_url }}">Governance</a></li>
             <li><a href="{{ '/ministerial-training' | relative_url }}">Ministerial Training</a></li>
-            <li><a href="{{ '/church-goals' | relative_url }}">Church Goals</a></li>
-            <li><a href="{{ '/acts-of-worship' | relative_url }}">Acts and Places of Worship</a></li>
+            <li><a href="{{ '/acts-of-worship' | relative_url }}">Acts of Worship</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-4 footer-col">
-          <h4>Contact Us</h4>
+          <h4>Connect</h4>
           <ul class="footer-links footer-contact">
+            <li><a href="{{ '/get-involved' | relative_url }}">Get Involved</a></li>
+            <li><a href="{{ '/resources' | relative_url }}">Resources</a></li>
+            <li><a href="{{ '/safety' | relative_url }}">Safety &amp; Privacy</a></li>
+            <li><a href="{{ '/faq' | relative_url }}">FAQ</a></li>
             <li><a href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i> {{ site.email }}</a></li>
           </ul>
-          <div class="footer-social">
-            {% for social in site.data.social %}
-            <a href="{{ social.url }}" target="_blank" rel="noopener"><i class="{{ social.icon }}"></i></a>
-            {% endfor %}
-          </div>
         </div>
 
       </div>
@@ -49,12 +47,18 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
-          <p>Blahaj Church {{ 'now' | date: '%Y' }}. All rights reserved.</p>
+          <p>&copy; Blahaj Church {{ 'now' | date: '%Y' }}. All rights reserved.</p>
         </div>
         <div class="col-md-6 text-md-right">
-          <a href="#">Terms of Service</a> &nbsp; <a href="#">Privacy Policy</a>
+          <a href="{{ '/safety' | relative_url }}#privacy-policy">Privacy Policy</a> &nbsp; <a href="{{ '/safety' | relative_url }}#terms">Terms of Service</a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="footer-disclaimer">
+    <div class="container">
+      <p class="footer-disclaimer-text">References to HRT and medical care on this site are spiritual and affirmational. We do not provide medical advice. Always consult qualified healthcare providers.</p>
     </div>
   </div>
 </footer>

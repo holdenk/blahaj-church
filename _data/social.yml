@@ -1,11 +1,12 @@
-- name: Facebook
-  url: "#"
-  icon: fab fa-facebook-f
-
-- name: Instagram
-  url: "#"
-  icon: fab fa-instagram
-
-- name: Twitter
-  url: "#"
-  icon: fab fa-twitter
+# Social media links - uncomment and add real URLs when ready
+# - name: Facebook
+#   url: "https://facebook.com/blahajchurch"
+#   icon: fab fa-facebook-f
+#
+# - name: Instagram
+#   url: "https://instagram.com/blahajchurch"
+#   icon: fab fa-instagram
+#
+# - name: Mastodon
+#   url: "https://mastodon.social/@blahajchurch"
+#   icon: fab fa-mastodon

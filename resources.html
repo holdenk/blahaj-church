@@ -89,7 +89,7 @@ permalink: /resources/
 {% assign categories = "Crisis Support,Legal Aid,Medical,Mutual Aid,Community & Culture,Safety,Reading" | split: "," %}
 {% for cat in categories %}
 <div class="resource-category">
-  <h3>{{ cat }}</h3>
+  <h3>{{ cat | escape }}</h3>
   <div class="resource-grid">
     {% for resource in site.data.resources %}
       {% if resource.category == cat %}

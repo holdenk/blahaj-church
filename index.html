@@ -610,6 +610,8 @@ hide_cta: false
     </div>
   </div>
 
+{% assign custom_icon_names = 'book-open|book-reader|candle-holder|church|cloud-rain|door-open|fish|fist-raised|hand-holding-heart|hands|hands-helping|hard-hat|pray|restroom|running|scroll|seedling|spa|water' | split: '|' %}
+
   <!-- ===== WHAT WE BELIEVE PREVIEW ===== -->
   <section class="home-section">
     <div class="container">
@@ -621,7 +623,7 @@ hide_cta: false
           {% if featured contains teaching.title %}
           <div class="belief-card">
             <div class="belief-icon {% cycle 'pink-tint', 'blue-tint', 'pink-tint', 'blue-tint' %}">
-              <i class="fas fa-{{ teaching.icon }}"></i>
+              {% if custom_icon_names contains teaching.icon %}<span class="cc-icon cc-icon-{{ teaching.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ teaching.icon }}"></i>{% endif %}
             </div>
             <h3>{{ teaching.title }}</h3>
             <p>{{ teaching.summary }}</p>

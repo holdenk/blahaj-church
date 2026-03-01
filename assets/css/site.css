@@ -1007,6 +1007,16 @@ a:focus-visible {
 
 .cc-icon-book-open { -webkit-mask-image: url('/assets/img/icons/custom/book-open.svg'); mask-image: url('/assets/img/icons/custom/book-open.svg'); }
 .cc-icon-book-reader { -webkit-mask-image: url('/assets/img/icons/custom/book-reader.svg'); mask-image: url('/assets/img/icons/custom/book-reader.svg'); }
+.cc-icon-church { -webkit-mask-image: url('/assets/img/icons/custom/church.svg'); mask-image: url('/assets/img/icons/custom/church.svg'); }
+.cc-icon-cloud-rain { -webkit-mask-image: url('/assets/img/icons/custom/cloud-rain.svg'); mask-image: url('/assets/img/icons/custom/cloud-rain.svg'); }
+.cc-icon-fist-raised { -webkit-mask-image: url('/assets/img/icons/custom/fist-raised.svg'); mask-image: url('/assets/img/icons/custom/fist-raised.svg'); }
+.cc-icon-hand-holding-heart { -webkit-mask-image: url('/assets/img/icons/custom/hand-holding-heart.svg'); mask-image: url('/assets/img/icons/custom/hand-holding-heart.svg'); }
+.cc-icon-hard-hat { -webkit-mask-image: url('/assets/img/icons/custom/hard-hat.svg'); mask-image: url('/assets/img/icons/custom/hard-hat.svg'); }
+.cc-icon-restroom { -webkit-mask-image: url('/assets/img/icons/custom/restroom.svg'); mask-image: url('/assets/img/icons/custom/restroom.svg'); }
+.cc-icon-running { -webkit-mask-image: url('/assets/img/icons/custom/running.svg'); mask-image: url('/assets/img/icons/custom/running.svg'); }
+.cc-icon-scroll { -webkit-mask-image: url('/assets/img/icons/custom/scroll.svg'); mask-image: url('/assets/img/icons/custom/scroll.svg'); }
+.cc-icon-seedling { -webkit-mask-image: url('/assets/img/icons/custom/seedling.svg'); mask-image: url('/assets/img/icons/custom/seedling.svg'); }
+.cc-icon-water { -webkit-mask-image: url('/assets/img/icons/custom/water.svg'); mask-image: url('/assets/img/icons/custom/water.svg'); }
 .cc-icon-candle-holder { -webkit-mask-image: url('/assets/img/icons/custom/candle-holder.svg'); mask-image: url('/assets/img/icons/custom/candle-holder.svg'); }
 .cc-icon-door-open { -webkit-mask-image: url('/assets/img/icons/custom/door-open.svg'); mask-image: url('/assets/img/icons/custom/door-open.svg'); }
 .cc-icon-fish { -webkit-mask-image: url('/assets/img/icons/custom/fish.svg'); mask-image: url('/assets/img/icons/custom/fish.svg'); }

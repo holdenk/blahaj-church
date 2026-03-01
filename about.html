@@ -88,6 +88,8 @@ permalink: /about/
 
 {% include disclaimer-banner.html %}
 
+{% assign custom_icon_names = 'book-open|book-reader|candle-holder|church|cloud-rain|door-open|fish|fist-raised|hand-holding-heart|hands|hands-helping|hard-hat|pray|restroom|running|scroll|seedling|spa|water' | split: '|' %}
+
 <h2>Our Teachings</h2>
 
 <div class="teaching-group">
@@ -96,7 +98,7 @@ permalink: /about/
     {% if teaching.group == "The Sacred Body" %}
     <details class="teaching-card">
       <summary>
-        <span class="teaching-icon"><i class="fas fa-{{ teaching.icon }}"></i></span>
+        <span class="teaching-icon">{% if custom_icon_names contains teaching.icon %}<span class="cc-icon cc-icon-{{ teaching.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ teaching.icon }}"></i>{% endif %}</span>
         <span class="teaching-text">
           <span class="teaching-title">{{ teaching.title }}</span>
           <span class="teaching-summary">{{ teaching.summary }}</span>
@@ -116,7 +118,7 @@ permalink: /about/
     {% if teaching.group == "Holy Practice" %}
     <details class="teaching-card">
       <summary>
-        <span class="teaching-icon"><i class="fas fa-{{ teaching.icon }}"></i></span>
+        <span class="teaching-icon">{% if custom_icon_names contains teaching.icon %}<span class="cc-icon cc-icon-{{ teaching.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ teaching.icon }}"></i>{% endif %}</span>
         <span class="teaching-text">
           <span class="teaching-title">{{ teaching.title }}</span>
           <span class="teaching-summary">{{ teaching.summary }}</span>
@@ -136,7 +138,7 @@ permalink: /about/
     {% if teaching.group == "Love and Justice" %}
     <details class="teaching-card">
       <summary>
-        <span class="teaching-icon"><i class="fas fa-{{ teaching.icon }}"></i></span>
+        <span class="teaching-icon">{% if custom_icon_names contains teaching.icon %}<span class="cc-icon cc-icon-{{ teaching.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ teaching.icon }}"></i>{% endif %}</span>
         <span class="teaching-text">
           <span class="teaching-title">{{ teaching.title }}</span>
           <span class="teaching-summary">{{ teaching.summary }}</span>
@@ -156,7 +158,7 @@ permalink: /about/
     {% if teaching.group == "Health and Wholeness" %}
     <details class="teaching-card">
       <summary>
-        <span class="teaching-icon"><i class="fas fa-{{ teaching.icon }}"></i></span>
+        <span class="teaching-icon">{% if custom_icon_names contains teaching.icon %}<span class="cc-icon cc-icon-{{ teaching.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ teaching.icon }}"></i>{% endif %}</span>
         <span class="teaching-text">
           <span class="teaching-title">{{ teaching.title }}</span>
           <span class="teaching-summary">{{ teaching.summary }}</span>

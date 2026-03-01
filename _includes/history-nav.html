@@ -1,0 +1,119 @@
+<div class="history-nav" aria-label="Explore more history">
+  <h2>Continue Exploring</h2>
+  <div class="history-nav-grid">
+
+    {% if page.permalink != '/history/sacred-lineage/' %}
+    <a href="{{ '/history/sacred-lineage/' | relative_url }}" class="history-nav-card">
+      <div class="history-nav-icon"><i class="fas fa-scroll"></i></div>
+      <h3>Sacred Lineage</h3>
+      {% if page.permalink == '/history/blahaj-icon/' %}
+      <p>The comfort the shark provides is part of a much older story &mdash; the ancient tradition of honoring gender diversity as sacred.</p>
+      {% elsif page.permalink == '/history/founding/' %}
+      <p>The ancient traditions that shaped our theology &mdash; from Two-Spirit healers to the Galli priests of Rome.</p>
+      {% else %}
+      <p>The oldest spiritual traditions on earth recognized the sacredness of those who transcend gender boundaries.</p>
+      {% endif %}
+    </a>
+    {% endif %}
+
+    {% if page.permalink != '/history/blahaj-icon/' %}
+    <a href="{{ '/history/blahaj-icon/' | relative_url }}" class="history-nav-card">
+      <div class="history-nav-icon"><i class="fas fa-fish"></i></div>
+      <h3>The Blåhaj Icon</h3>
+      {% if page.permalink == '/history/sacred-lineage/' %}
+      <p>See how these ancient traditions found modern expression in the most unexpected form &mdash; a stuffed shark.</p>
+      {% elsif page.permalink == '/history/founding/' %}
+      <p>How the symbol at the heart of our name became a beloved icon of trans joy and comfort.</p>
+      {% else %}
+      <p>The story of how IKEA's stuffed shark became one of the most recognizable symbols of trans joy.</p>
+      {% endif %}
+    </a>
+    {% endif %}
+
+    {% if page.permalink != '/history/founding/' %}
+    <a href="{{ '/history/founding/' | relative_url }}" class="history-nav-card">
+      <div class="history-nav-icon"><i class="fas fa-church"></i></div>
+      <h3>Our Founding</h3>
+      {% if page.permalink == '/history/sacred-lineage/' %}
+      <p>Learn how the Blahaj Church was founded to carry this sacred lineage forward into the modern world.</p>
+      {% elsif page.permalink == '/history/blahaj-icon/' %}
+      <p>From a stuffed shark to a congregation &mdash; the founding of the Blahaj Church in 2023.</p>
+      {% else %}
+      <p>The story of how the Blahaj Church was born from a personal wilderness and a revelation of sacred softness.</p>
+      {% endif %}
+    </a>
+    {% endif %}
+
+  </div>
+</div>
+
+<style>
+.history-nav {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid #f0eff4;
+}
+
+.history-nav h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.history-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.history-nav-card {
+  background: var(--bg-light);
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid #f0eff4;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+.history-nav-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: inherit;
+}
+
+.history-nav-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink-light), var(--blue-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  font-size: 18px;
+  color: var(--text-dark);
+}
+
+.history-nav-card h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+  color: var(--text-dark);
+}
+
+.history-nav-card p {
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .history-nav-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

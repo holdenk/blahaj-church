@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 <style>
-/* --- Mission & Foundation --- */
+/* --- About page specific --- */
 .mission-statement {
   font-size: 18px;
   line-height: 1.8;
@@ -62,192 +62,10 @@ permalink: /about/
   font-size: 13px;
 }
 
-/* --- Disclaimer Banner --- */
-.disclaimer-banner {
-  background: #fff8e1;
-  border: 1px solid #ffe082;
-  border-radius: 12px;
-  padding: 16px 24px;
-  margin-bottom: 48px;
-}
-
-.disclaimer-banner p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--text-medium);
-}
-
-.disclaimer-banner i {
-  color: #f9a825;
-  margin-right: 6px;
-}
-
-/* --- Teaching Groups --- */
-.teaching-group {
-  margin-bottom: 48px;
-}
-
-.teaching-group-title {
-  font-family: var(--font-heading);
-  font-size: 18px;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--text-dark);
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--pink);
-}
-
-.teaching-group-title i {
-  color: var(--pink-dark);
-  margin-right: 10px;
-}
-
-/* --- Teaching Cards (details/summary) --- */
-.teaching-card {
-  border: 1px solid #eee;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  background: #fff;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.teaching-card:hover {
-  border-color: var(--pink-light);
-  box-shadow: 0 2px 12px rgba(246, 168, 182, 0.12);
-}
-
-.teaching-card summary {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 20px 24px;
-  list-style: none;
-  position: relative;
-}
-
-.teaching-card summary::-webkit-details-marker {
-  display: none;
-}
-
-.teaching-card summary::marker {
-  display: none;
-  content: '';
-}
-
-/* Chevron indicator */
-.teaching-card summary::after {
-  content: '\f054';
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  font-size: 12px;
-  color: var(--text-light);
-  margin-left: auto;
-  flex-shrink: 0;
-  transition: transform 0.25s ease;
-}
-
-.teaching-card[open] summary::after {
-  transform: rotate(90deg);
-  color: var(--pink-dark);
-}
-
-.teaching-card[open] summary {
-  border-bottom: 1px solid #eee;
-}
-
-/* Icon circle */
-.teaching-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 50%;
-  background: var(--pink-light);
-  color: var(--pink-dark);
-  font-size: 16px;
-}
-
-/* Title and summary text */
-.teaching-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.teaching-title {
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--text-dark);
-}
-
-.teaching-summary {
-  font-size: 14px;
-  color: var(--text-light);
-  line-height: 1.5;
-}
-
-/* Body content */
-.teaching-body {
-  padding: 20px 24px;
-}
-
-.teaching-body p {
-  margin: 0;
-  color: var(--text-medium);
-  line-height: 1.8;
-}
-
-/* --- Bottom CTA --- */
-.beliefs-cta {
-  text-align: center;
-  margin-top: 48px;
-  padding-top: 40px;
-  border-top: 2px solid var(--pink);
-}
-
-.beliefs-cta p {
-  font-size: 18px;
-  color: var(--text-medium);
-  margin-bottom: 20px;
-}
-
-/* --- Responsive --- */
 @media (max-width: 767px) {
   .mission-statement {
     font-size: 16px;
     text-align: left;
-  }
-
-  .teaching-card summary {
-    padding: 16px 18px;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .teaching-icon {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    font-size: 14px;
-  }
-
-  .teaching-title {
-    font-size: 15px;
-  }
-
-  .teaching-summary {
-    font-size: 13px;
-  }
-
-  .teaching-body {
-    padding: 16px 18px;
   }
 
   .blahaj-explainer {
@@ -263,7 +81,7 @@ permalink: /about/
 <h2>Our Theological Foundation</h2>
 
 <p class="theological-foundation">
-  We hold that gender diversity is not an accident, a disorder, or a deviation &mdash; it is a reflection of the divine. Across cultures and throughout history, those who transcend the boundaries of gender have been recognized as sacred: the Two-Spirit people of Indigenous North America, the hijra of South Asia, the Galli priests of ancient Rome, the six genders named in the Talmud. We stand in this ancient tradition, affirming that trans, gender non-conforming, and intersex individuals carry inherent spiritual meaning. For the full scholarly treatment, <a href="{{ '/history/' | relative_url }}">explore our Sacred History</a>.
+  We hold that gender diversity is not an accident, a disorder, or a deviation &mdash; it is a reflection of the divine. Across cultures and throughout history, those who transcend the boundaries of gender have been recognized as sacred: the Two-Spirit people of Indigenous North America, the hijra of South Asia, the Galli priests of ancient Rome, the six genders named in the Talmud. We stand in this ancient tradition, affirming that trans, gender non-conforming, and intersex individuals carry inherent spiritual meaning. For the full scholarly treatment, <a href="{{ '/history/sacred-lineage/' | relative_url }}">explore our Sacred History</a>.
 </p>
 
 {% include blahaj-explainer.html %}
@@ -355,4 +173,6 @@ permalink: /about/
 <div class="beliefs-cta">
   <p>Our faith stands in the oldest spiritual traditions on earth.</p>
   <a href="{{ '/history/' | relative_url }}" class="btn-pill">Explore the Sacred History of Gender Diversity</a>
+  <p style="margin-top:16px;font-size:16px;color:var(--text-medium);">Discover the stories, parables, and wisdom of our community.</p>
+  <a href="{{ '/way-of-the-shark/' | relative_url }}" class="btn-pill" style="background:var(--blue);margin-top:4px;">Read the Way of the Shark</a>
 </div>

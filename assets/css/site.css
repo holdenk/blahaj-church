@@ -747,3 +747,28 @@ a:focus-visible {
 @media (max-width: 767px) {
   .text-md-right { text-align: left; }
 }
+
+/* Custom CC-friendly icon set (locally authored SVG masks) */
+.cc-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.cc-icon-book-open { -webkit-mask-image: url('/assets/img/icons/custom/book-open.svg'); mask-image: url('/assets/img/icons/custom/book-open.svg'); }
+.cc-icon-book-reader { -webkit-mask-image: url('/assets/img/icons/custom/book-reader.svg'); mask-image: url('/assets/img/icons/custom/book-reader.svg'); }
+.cc-icon-candle-holder { -webkit-mask-image: url('/assets/img/icons/custom/candle-holder.svg'); mask-image: url('/assets/img/icons/custom/candle-holder.svg'); }
+.cc-icon-door-open { -webkit-mask-image: url('/assets/img/icons/custom/door-open.svg'); mask-image: url('/assets/img/icons/custom/door-open.svg'); }
+.cc-icon-fish { -webkit-mask-image: url('/assets/img/icons/custom/fish.svg'); mask-image: url('/assets/img/icons/custom/fish.svg'); }
+.cc-icon-hands { -webkit-mask-image: url('/assets/img/icons/custom/hands.svg'); mask-image: url('/assets/img/icons/custom/hands.svg'); }
+.cc-icon-hands-helping { -webkit-mask-image: url('/assets/img/icons/custom/hands-helping.svg'); mask-image: url('/assets/img/icons/custom/hands-helping.svg'); }
+.cc-icon-pray { -webkit-mask-image: url('/assets/img/icons/custom/pray.svg'); mask-image: url('/assets/img/icons/custom/pray.svg'); }
+.cc-icon-spa { -webkit-mask-image: url('/assets/img/icons/custom/spa.svg'); mask-image: url('/assets/img/icons/custom/spa.svg'); }

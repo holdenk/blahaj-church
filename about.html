@@ -5,7 +5,6 @@ permalink: /about/
 ---
 
 <style>
-/* --- About page specific --- */
 .mission-statement {
   font-size: 18px;
   line-height: 1.8;
@@ -25,51 +24,10 @@ permalink: /about/
   font-weight: 600;
 }
 
-/* --- Blahaj Explainer (page context) --- */
-.blahaj-explainer {
-  max-width: 640px;
-  margin: 0 auto 40px;
-  background: var(--bg-light);
-  border: 1px solid rgba(138, 203, 239, 0.25);
-  border-radius: 16px;
-  padding: 24px 28px;
-  text-align: left;
-}
-
-.blahaj-explainer h3 {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--blue-dark);
-  margin-bottom: 8px;
-}
-
-.blahaj-explainer h3 i {
-  margin-right: 6px;
-}
-
-.blahaj-explainer p {
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--text-medium);
-  margin: 0;
-}
-
-.blahaj-explainer em {
-  color: var(--text-light);
-  font-size: 13px;
-}
-
 @media (max-width: 767px) {
   .mission-statement {
     font-size: 16px;
     text-align: left;
-  }
-
-  .blahaj-explainer {
-    padding: 20px;
   }
 }
 </style>
@@ -88,93 +46,15 @@ permalink: /about/
 
 {% include disclaimer-banner.html %}
 
-{% assign custom_icon_names = 'book-open|book-reader|candle-holder|church|cloud-rain|door-open|fish|fist-raised|hand-holding-heart|hands|hands-helping|hard-hat|pray|restroom|running|scroll|seedling|spa|water' | split: '|' %}
+{% include custom-icons.html %}
 
 <h2>Our Teachings</h2>
 
-<div class="teaching-group">
-  <h3 class="teaching-group-title"><i class="fas fa-star"></i> The Sacred Body</h3>
-  {% for teaching in site.data.teachings %}
-    {% if teaching.group == "The Sacred Body" %}
-    <details class="teaching-card">
-      <summary>
-        <span class="teaching-icon">{% if custom_icon_names contains teaching.icon %}<span class="cc-icon cc-icon-{{ teaching.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ teaching.icon }}"></i>{% endif %}</span>
-        <span class="teaching-text">
-          <span class="teaching-title">{{ teaching.title }}</span>
-          <span class="teaching-summary">{{ teaching.summary }}</span>
-        </span>
-      </summary>
-      <div class="teaching-body">
-        <p>{{ teaching.body }}</p>
-      </div>
-    </details>
-    {% endif %}
-  {% endfor %}
-</div>
+{% include teaching-group.html name="The Sacred Body" icon="star" %}
+{% include teaching-group.html name="Holy Practice" icon="hands" %}
+{% include teaching-group.html name="Love and Justice" icon="heart" %}
+{% include teaching-group.html name="Health and Wholeness" icon="medkit" %}
 
-<div class="teaching-group">
-  <h3 class="teaching-group-title"><span class="cc-icon cc-icon-hands" aria-hidden="true"></span> Holy Practice</h3>
-  {% for teaching in site.data.teachings %}
-    {% if teaching.group == "Holy Practice" %}
-    <details class="teaching-card">
-      <summary>
-        <span class="teaching-icon">{% if custom_icon_names contains teaching.icon %}<span class="cc-icon cc-icon-{{ teaching.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ teaching.icon }}"></i>{% endif %}</span>
-        <span class="teaching-text">
-          <span class="teaching-title">{{ teaching.title }}</span>
-          <span class="teaching-summary">{{ teaching.summary }}</span>
-        </span>
-      </summary>
-      <div class="teaching-body">
-        <p>{{ teaching.body }}</p>
-      </div>
-    </details>
-    {% endif %}
-  {% endfor %}
-</div>
+{% include section-cta.html text="Our faith stands in the oldest spiritual traditions on earth." url="/history/" label="Explore the Sacred History of Gender Diversity" %}
 
-<div class="teaching-group">
-  <h3 class="teaching-group-title"><i class="fas fa-heart"></i> Love and Justice</h3>
-  {% for teaching in site.data.teachings %}
-    {% if teaching.group == "Love and Justice" %}
-    <details class="teaching-card">
-      <summary>
-        <span class="teaching-icon">{% if custom_icon_names contains teaching.icon %}<span class="cc-icon cc-icon-{{ teaching.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ teaching.icon }}"></i>{% endif %}</span>
-        <span class="teaching-text">
-          <span class="teaching-title">{{ teaching.title }}</span>
-          <span class="teaching-summary">{{ teaching.summary }}</span>
-        </span>
-      </summary>
-      <div class="teaching-body">
-        <p>{{ teaching.body }}</p>
-      </div>
-    </details>
-    {% endif %}
-  {% endfor %}
-</div>
-
-<div class="teaching-group">
-  <h3 class="teaching-group-title"><i class="fas fa-medkit"></i> Health and Wholeness</h3>
-  {% for teaching in site.data.teachings %}
-    {% if teaching.group == "Health and Wholeness" %}
-    <details class="teaching-card">
-      <summary>
-        <span class="teaching-icon">{% if custom_icon_names contains teaching.icon %}<span class="cc-icon cc-icon-{{ teaching.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ teaching.icon }}"></i>{% endif %}</span>
-        <span class="teaching-text">
-          <span class="teaching-title">{{ teaching.title }}</span>
-          <span class="teaching-summary">{{ teaching.summary }}</span>
-        </span>
-      </summary>
-      <div class="teaching-body">
-        <p>{{ teaching.body }}</p>
-      </div>
-    </details>
-    {% endif %}
-  {% endfor %}
-</div>
-
-<div class="beliefs-cta">
-  <p>Our faith stands in the oldest spiritual traditions on earth.</p>
-  <a href="{{ '/history/' | relative_url }}" class="btn-pill">Explore the Sacred History of Gender Diversity</a>
-  <p style="margin-top:16px;font-size:16px;color:var(--text-medium);">Discover the stories, parables, and wisdom of our community.</p>
-  <a href="{{ '/way-of-the-shark/' | relative_url }}" class="btn-pill" style="background:var(--blue);margin-top:4px;">Read the Way of the Shark</a>
-</div>
+{% include section-cta.html text="Discover the stories, parables, and wisdom of our community." url="/way-of-the-shark/" label="Read the Way of the Shark" style="background:var(--blue)" %}

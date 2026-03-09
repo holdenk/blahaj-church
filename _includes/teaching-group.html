@@ -1,0 +1,19 @@
+<div class="teaching-group">
+  <h3 class="teaching-group-title">{% if custom_icon_names contains include.icon %}<span class="cc-icon cc-icon-{{ include.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ include.icon }}"></i>{% endif %} {{ include.name }}</h3>
+  {% for teaching in site.data.teachings %}
+    {% if teaching.group == include.name %}
+    <details class="teaching-card">
+      <summary>
+        <span class="teaching-icon">{% if custom_icon_names contains teaching.icon %}<span class="cc-icon cc-icon-{{ teaching.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ teaching.icon }}"></i>{% endif %}</span>
+        <span class="teaching-text">
+          <span class="teaching-title">{{ teaching.title }}</span>
+          <span class="teaching-summary">{{ teaching.summary }}</span>
+        </span>
+      </summary>
+      <div class="teaching-body">
+        <p>{{ teaching.body }}</p>
+      </div>
+    </details>
+    {% endif %}
+  {% endfor %}
+</div>

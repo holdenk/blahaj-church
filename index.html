@@ -470,52 +470,28 @@ hide_cta: false
   margin: 0;
 }
 
-/* --- Pull quote --- */
+/* --- Pull quote (homepage overrides) --- */
 .pull-quote-section {
   padding: 60px 0;
   text-align: center;
 }
 
-.pull-quote {
+.pull-quote-section .pull-quote {
   max-width: 680px;
   margin: 0 auto;
-  position: relative;
   padding: 40px 48px;
 }
 
-.pull-quote::before {
-  content: '';
+.pull-quote-section .pull-quote::before {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 48px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--pink), var(--blue));
-  border-radius: 3px;
-}
-
-.pull-quote blockquote {
-  font-family: var(--font-body);
-  font-size: 22px;
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.8;
-  color: var(--text-medium);
   margin: 0;
-  padding: 0;
-  border: none;
 }
 
-.pull-quote cite {
-  display: block;
-  margin-top: 20px;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--pink-dark);
+.pull-quote-section .pull-quote blockquote {
+  font-size: 22px;
 }
 
 /* --- Responsive --- */
@@ -610,7 +586,7 @@ hide_cta: false
     </div>
   </div>
 
-{% assign custom_icon_names = 'book-open|book-reader|candle-holder|church|cloud-rain|door-open|fish|fist-raised|hand-holding-heart|hands|hands-helping|hard-hat|pray|restroom|running|scroll|seedling|spa|water' | split: '|' %}
+{% include custom-icons.html %}
 
   <!-- ===== WHAT WE BELIEVE PREVIEW ===== -->
   <section class="home-section">

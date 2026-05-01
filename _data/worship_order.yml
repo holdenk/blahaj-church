@@ -1,0 +1,34 @@
+- title: Gathering
+  icon: door-open
+  custom_icon: true
+  description: "We arrive, greet one another, and reconnect. This is fellowship time: catching up, sharing coffee, and settling in together."
+
+- title: Opening Reflection
+  icon: book-open
+  custom_icon: true
+  description: "A reading from a sacred or foundational text, or a reflection on the month's theme, opens the service and centers us as a community."
+
+- title: Community Check-In
+  icon: hands-helping
+  custom_icon: true
+  description: "We go around and share how we are doing. Are we safe? How is our health? Do we need gear or support? This is part of how we try to care for each other."
+
+- title: Sermon / Teaching
+  icon: comment-alt
+  custom_icon: false
+  description: "A short teaching from the First Minister or a guest speaker. Topics range from theological reflections on the sacredness of gender diversity to practical wisdom for everyday life."
+
+- title: HRT Communion
+  icon: heart
+  custom_icon: false
+  description: "Those who choose to take their hormone replacement therapy do so together, as a sacred act of affirmation and joy. Participation is entirely voluntary; the Church does not provide medications. Congregants who do not take HRT participate through presence and support."
+
+- title: Prayers &amp; Intentions
+  icon: pray
+  custom_icon: true
+  description: "We hold space for prayers &ndash; for our community, for those facing hardship, for those we have lost, and for the wider world. Members may offer their own intentions."
+
+- title: Closing Blessing
+  icon: sun
+  custom_icon: false
+  description: "A reminder that our very existence is an act of faith and resistance. We close with a blessing and carry that light into the world."

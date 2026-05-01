@@ -1,0 +1,47 @@
+- title: HRT Communion
+  anchor: hrt-communion
+  icon: heart
+  custom_icon: false
+  frequency: Periodic
+  short_description: "Beyond our monthly service, we hold dedicated in-person HRT Communion celebrations &ndash; joyful gatherings where members come together to take their hormone replacement therapy as a communal, sacred act. We share a meal, support one another, and honor the transformative power of HRT in our lives. Participation is always voluntary."
+  long_paragraphs:
+    - "In addition to the monthly gathering, the Blahaj Church hosts in-person HRT Communion celebrations where members come together to take their hormone replacement therapy as a communal, sacred act of affirmation. These gatherings are joyful, celebratory events &ndash; part fellowship, part ritual &ndash; where congregants share a meal, support one another, and collectively honor the transformative power of HRT in their lives."
+    - "HRT Communion reflects the church's belief that gender-affirming care is not merely medical but deeply spiritual. By celebrating together in person, members affirm the sacredness of their transitions and strengthen the bonds of community. Whether someone is new to HRT or years into their journey, all are welcomed and celebrated."
+
+- title: Virtual Shot Hangout
+  icon: video
+  custom_icon: false
+  frequency: Weekly
+  short_description: "Most weeks, members who inject their own HRT gather can choose to join on a video call. It is a simple, powerful ritual: taking your shot in the company of people who understand what it means. Community support, a few laughs, and the comfort of not doing it alone."
+  long_paragraphs:
+    - "A weekly virtual gathering where members who inject hormone replacement therapy may choose to take their sacred HRT in the company of other members. This weekly ritual provides a sense of community and support for those undergoing HRT, and serves as a reminder of the transformative power of hormone therapy in affirming one's gender identity and the sacred nature of trans lives."
+
+- title: Gear Day
+  icon: wrench
+  custom_icon: false
+  frequency: Quarterly
+  short_description: "We gather quarterly to repair and maintain each other's safety gear, share equipment that no longer fits, and talk about safety practices. When the budget allows, new gear may be available. It is mutual aid in action &ndash; keeping each other safe, together."
+  long_paragraphs:
+    - "The Blahaj Church hosts quarterly \"gear days,\" where members come together to repair and maintain each other's safety gear, as well as discuss ways to improve safety and reduce risks associated with living as trans, gender non-conforming, or intersex individuals. These events are an opportunity for members to share knowledge and resources, and to build a sense of solidarity and mutual support in the face of the challenges of navigating a world that is often hostile to their identities."
+    - "Congregants may bring gear in good condition which no longer suits their needs to share. When budget allows, new gear may also be available."
+
+- title: Bath / Spa Days
+  anchor: bath-spa
+  icon: spa
+  custom_icon: true
+  frequency: Periodic
+  short_description: "Communal self-care in a safe, affirming environment. For many of us, spa and bathing spaces can feel hostile or unsafe. Our spa days aims to reclaim that experience with the simple comfort of communal bathing without fear. Every body is sacred and deserving of care."
+  long_paragraphs:
+    - "The Blahaj Church organizes communal bath and spa days as a ritual of sacred self-care and bodily affirmation. For many trans, gender non-conforming, and intersex individuals, accessing spa and bathing spaces can be fraught with anxiety, harassment, or outright exclusion. Locker rooms, pools, and spas &ndash; spaces that most people take for granted &ndash; can feel hostile or unsafe for those whose bodies do not conform to cisgender expectations."
+    - "By organizing these gatherings within the safety of the congregation, the church creates a space where members can experience the simple, profound comfort of communal bathing and self-care without fear. These events draw on long traditions of ritual purification and communal bathing found across many faiths &ndash; from the Jewish mikveh to the Japanese onsen to the Roman thermae &ndash; reframed through the lens of trans affirmation and bodily celebration."
+    - "Spa days may include massage, skincare, hair care, and other affirming services provided in an environment of acceptance and joy. They are a tangible expression of the church's belief that every body is sacred and deserving of care."
+
+- title: Motorcycle Pilgrimages
+  long_title: "Rides to Alice's Restaurant"
+  icon: motorcycle
+  custom_icon: false
+  frequency: Monthly
+  short_description: "Members who ride gather monthly for a group ride to Alice's Restaurant, a beloved Bay Area destination. Organized through our affiliation with the Sparkling Pink Pandas, these rides are acts of worship &ndash; celebrating freedom, self-expression, and the joy of the open road. Non-riders are welcome to meet us there."
+  long_paragraphs:
+    - "Members who ride motorcycles or scooters gather monthly for a group ride to Alice's Restaurant, a historic eatery in the Bay Area. For the church, these rides are acts of worship &ndash; a celebration of freedom, self-expression, and the experience of living fully in one's body. The open road is a place of reflection and joy, and the shared ride builds fellowship among congregants."
+    - "These rides are organized through the church's affiliation with the Sparkling Pink Pandas. Non-riders are welcome to meet the group at the destination."

@@ -305,47 +305,13 @@ permalink: /community/
 <p>Here is what a typical gathering looks like:</p>
 
 <div class="worship-timeline">
+  {% for step in site.data.worship_order %}
   <div class="timeline-step">
-    <div class="step-icon"><span class="cc-icon cc-icon-door-open" aria-hidden="true"></span></div>
-    <h4>Gathering</h4>
-    <p>We arrive, greet one another, and reconnect. This is fellowship time: catching up, sharing coffee, and settling in together.</p>
+    <div class="step-icon">{% if step.custom_icon %}<span class="cc-icon cc-icon-{{ step.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ step.icon }}"></i>{% endif %}</div>
+    <h4>{{ step.title }}</h4>
+    <p>{{ step.description }}</p>
   </div>
-
-  <div class="timeline-step">
-    <div class="step-icon"><span class="cc-icon cc-icon-book-open" aria-hidden="true"></span></div>
-    <h4>Opening Reflection</h4>
-    <p>A reading from a sacred or foundational text, or a reflection on the month's theme, opens the service and centers us as a community.</p>
-  </div>
-
-  <div class="timeline-step">
-    <div class="step-icon"><span class="cc-icon cc-icon-hands-helping" aria-hidden="true"></span></div>
-    <h4>Community Check-In</h4>
-    <p>We go around and share how we are doing. Are we safe? How is our health? Do we need gear or support? This is part of how we try to care for eachother.</p>
-  </div>
-
-  <div class="timeline-step">
-    <div class="step-icon"><i class="fas fa-comment-alt"></i></div>
-    <h4>Sermon / Teaching</h4>
-    <p>A short teaching from the First Minister or a guest speaker. Topics range from theological reflections on the sacredness of gender diversity to practical wisdom for everyday life.</p>
-  </div>
-
-  <div class="timeline-step">
-    <div class="step-icon"><i class="fas fa-heart"></i></div>
-    <h4>HRT Communion</h4>
-    <p>Those who choose to take their hormone replacement therapy do so together, as a sacred act of affirmation and joy. Participation is entirely voluntary; the Church does not provide medications. Congregants who do not take HRT participate through presence and support.</p>
-  </div>
-
-  <div class="timeline-step">
-    <div class="step-icon"><span class="cc-icon cc-icon-pray" aria-hidden="true"></span></div>
-    <h4>Prayers &amp; Intentions</h4>
-    <p>We hold space for prayers &ndash; for our community, for those facing hardship, for those we have lost, and for the wider world. Members may offer their own intentions.</p>
-  </div>
-
-  <div class="timeline-step">
-    <div class="step-icon"><i class="fas fa-sun"></i></div>
-    <h4>Closing Blessing</h4>
-    <p>A reminder that our very existence is an act of faith and resistance. We close with a blessing and carry that light into the world.</p>
-  </div>
+  {% endfor %}
 </div>
 
 <!-- ======================================== -->
@@ -361,40 +327,14 @@ permalink: /community/
 <h2>Regular Activities</h2>
 
 <div class="activity-grid">
+  {% for activity in site.data.regular_activities %}
   <div class="activity-card">
-    <div class="activity-icon"><i class="fas fa-heart"></i></div>
-    <span class="card-tag">Periodic</span>
-    <h3>HRT Communion</h3>
-    <p>Beyond our monthly service, we hold dedicated in-person HRT Communion celebrations &ndash; joyful gatherings where members come together to take their hormone replacement therapy as a communal, sacred act. We share a meal, support one another, and honor the transformative power of HRT in our lives. Participation is always voluntary.</p>
+    <div class="activity-icon">{% if activity.custom_icon %}<span class="cc-icon cc-icon-{{ activity.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ activity.icon }}"></i>{% endif %}</div>
+    <span class="card-tag">{{ activity.frequency }}</span>
+    <h3>{{ activity.title }}</h3>
+    <p>{{ activity.short_description }}</p>
   </div>
-
-  <div class="activity-card">
-    <div class="activity-icon"><i class="fas fa-video"></i></div>
-    <span class="card-tag">Weekly</span>
-    <h3>Virtual Shot Hangout</h3>
-    <p>Most weeks, members who inject their own HRT gather can choose to join on a video call. It is a simple, powerful ritual: taking your shot in the company of people who understand what it means. Community support, a few laughs, and the comfort of not doing it alone.</p>
-  </div>
-
-  <div class="activity-card">
-    <div class="activity-icon"><i class="fas fa-wrench"></i></div>
-    <span class="card-tag">Quarterly</span>
-    <h3>Gear Day</h3>
-    <p>We gather quarterly to repair and maintain each other's safety gear, share equipment that no longer fits, and talk about safety practices. When the budget allows, new gear may be available. It is mutual aid in action &ndash; keeping each other safe, together.</p>
-  </div>
-
-  <div class="activity-card">
-    <div class="activity-icon"><span class="cc-icon cc-icon-spa" aria-hidden="true"></span></div>
-    <span class="card-tag">Periodic</span>
-    <h3>Bath / Spa Days</h3>
-    <p>Communal self-care in a safe, affirming environment. For many of us, spa and bathing spaces can feel hostile or unsafe. Our spa days aims to reclaim that experience with the simple comfort of communal bathing without fear. Every body is sacred and deserving of care.</p>
-  </div>
-
-  <div class="activity-card">
-    <div class="activity-icon"><i class="fas fa-motorcycle"></i></div>
-    <span class="card-tag">Monthly</span>
-    <h3>Motorcycle Pilgrimages</h3>
-    <p>Members who ride gather monthly for a group ride to Alice's Restaurant, a beloved Bay Area destination. Organized through our affiliation with the Sparkling Pink Pandas, these rides are acts of worship &ndash; celebrating freedom, self-expression, and the joy of the open road. Non-riders are welcome to meet us there.</p>
-  </div>
+  {% endfor %}
 </div>
 
 <!-- ======================================== -->
@@ -406,27 +346,15 @@ permalink: /community/
 <p>Certain days hold special significance for our community. We mark them with intention, remembrance, and celebration.</p>
 
 <div class="observance-cards">
+  {% for observance in site.data.annual_observances %}
   <div class="observance-card">
-    <div class="observance-icon"><span class="cc-icon cc-icon-candle-holder" aria-hidden="true"></span></div>
-    <span class="observance-date">November 20</span>
-    <h3>Trans Day of Remembrance</h3>
-    <p>We gather for a candlelight vigil and memorial service, honoring the lives lost to transphobic violence. The First Minister delivers a sermon, and members share reflections in a space of communal grieving and resolve.</p>
-    <p>This can be a hard day with a lot of emotion, as always please prioritize self-care and feel free to not attend if the energy is not right for you.</p>
+    <div class="observance-icon">{% if observance.custom_icon %}<span class="cc-icon cc-icon-{{ observance.icon }}" aria-hidden="true"></span>{% else %}<i class="fas fa-{{ observance.icon }}"></i>{% endif %}</div>
+    <span class="observance-date">{{ observance.date }}</span>
+    <h3>{{ observance.title }}</h3>
+    <p>{{ observance.short_description }}</p>
+    {% if observance.short_addendum %}<p>{{ observance.short_addendum }}</p>{% endif %}
   </div>
-
-  <div class="observance-card">
-    <div class="observance-icon"><i class="fas fa-star"></i></div>
-    <span class="observance-date">March 31</span>
-    <h3>Trans Day of Visibility</h3>
-    <p>A day of celebration and empowerment. We gather for sermons, social events, and community activities. Members wear trans flag colors and engage in acts of allyship and activism &ndash; affirming that we are here, we are visible, and we are not going anywhere.</p>
-  </div>
-
-  <div class="observance-card">
-    <div class="observance-icon"><i class="fas fa-flag"></i></div>
-    <span class="observance-date">June</span>
-    <h3>SF Pride &amp; Trans March</h3>
-    <p>We participate in San Francisco Pride and the Trans March each June. Some members choose to ride through our affiliation with the Sparkling Pink Pandas. In the past we have provided traffic support to ensure the safety of all marchers, although this has become less critical. It is a visible act of solidarity and joy.</p>
-  </div>
+  {% endfor %}
 </div>
 
 <!-- ======================================== -->

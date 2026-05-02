@@ -13,67 +13,24 @@ permalink: /acts-of-worship/
 <p>The congregation meets monthly in the Bay Area for a worship gathering. A typical service follows this order:</p>
 
 <div class="worship-order">
+  {% for step in site.data.worship_order %}
   <div class="worship-order-item">
-    <h4>Gathering</h4>
-    <p>Congregants arrive and greet one another. This is a time of fellowship and reconnection.</p>
+    <h4>{{ step.title }}</h4>
+    <p>{{ step.description }}</p>
   </div>
-
-  <div class="worship-order-item">
-    <h4>Opening Reflection</h4>
-    <p>A reading from a sacred or foundational text, or a reflection on the month's theme, opens the service and centers the congregation.</p>
-  </div>
-
-  <div class="worship-order-item">
-    <h4>Community Check-In</h4>
-    <p>Members share how they are doing &ndash; are they safe, how is their health, do they need gear or support. This is the congregation caring for one another.</p>
-  </div>
-
-  <div class="worship-order-item">
-    <h4>Sermon / Teaching</h4>
-    <p>A short sermon delivered by the First Minister or a guest speaker. Topics may include theological reflections on the sacredness of gender diversity, latest research relevant to the congregation's well-being, or teachings drawn from the church's doctrine.</p>
-  </div>
-
-  <div class="worship-order-item">
-    <h4>HRT Communion</h4>
-    <p>Those who choose to take their hormone replacement therapy do so communally, as a sacred act of affirmation. Participation is entirely voluntary &ndash; this is an invitation, not a requirement. Congregants who do not take HRT, or who prefer to take it privately, participate through presence and support.</p>
-  </div>
-
-  <div class="worship-order-item">
-    <h4>Prayers and Intentions</h4>
-    <p>Prayers for the community, for those facing hardship, for those who have been lost to violence or despair, and for the wider world. Members may offer their own intentions.</p>
-  </div>
-
-  <div class="worship-order-item">
-    <h4>Closing</h4>
-    <p>A reminder that the congregation's very existence is an affront to those who deny the sacred nature of trans lives. Our continued existence is an act of faith and of resistance. The service closes with a blessing.</p>
-  </div>
+  {% endfor %}
 </div>
 
 <h2>Regular Acts of Worship</h2>
 
-<div id="hrt-communion" class="worship-section">
-  <h3>HRT Communion</h3>
-  <p>In addition to the monthly gathering, the Blahaj Church hosts in-person HRT Communion celebrations where members come together to take their hormone replacement therapy as a communal, sacred act of affirmation. These gatherings are joyful, celebratory events &ndash; part fellowship, part ritual &ndash; where congregants share a meal, support one another, and collectively honor the transformative power of HRT in their lives.</p>
-  <p>HRT Communion reflects the church's belief that gender-affirming care is not merely medical but deeply spiritual. By celebrating together in person, members affirm the sacredness of their transitions and strengthen the bonds of community. Whether someone is new to HRT or years into their journey, all are welcomed and celebrated.</p>
+{% for activity in site.data.regular_activities %}{% unless activity.title == "Motorcycle Pilgrimages" %}
+<div{% if activity.anchor %} id="{{ activity.anchor }}"{% endif %} class="worship-section">
+  <h3>{{ activity.title }}</h3>
+  {% for paragraph in activity.long_paragraphs %}
+  <p>{{ paragraph }}</p>
+  {% endfor %}
 </div>
-
-<div class="worship-section">
-  <h3>Virtual Shot Hangout</h3>
-  <p>A weekly virtual gathering where members who inject hormone replacement therapy may choose to take their sacred HRT in the company of other members. This weekly ritual provides a sense of community and support for those undergoing HRT, and serves as a reminder of the transformative power of hormone therapy in affirming one's gender identity and the sacred nature of trans lives.</p>
-</div>
-
-<div class="worship-section">
-  <h3>Gear Day</h3>
-  <p>The Blahaj Church hosts quarterly "gear days," where members come together to repair and maintain each other's safety gear, as well as discuss ways to improve safety and reduce risks associated with living as trans, gender non-conforming, or intersex individuals. These events are an opportunity for members to share knowledge and resources, and to build a sense of solidarity and mutual support in the face of the challenges of navigating a world that is often hostile to their identities.</p>
-  <p>Congregants may bring gear in good condition which no longer suits their needs to share. When budget allows, new gear may also be available.</p>
-</div>
-
-<div id="bath-spa" class="worship-section">
-  <h3>Bath / Spa Days</h3>
-  <p>The Blahaj Church organizes communal bath and spa days as a ritual of sacred self-care and bodily affirmation. For many trans, gender non-conforming, and intersex individuals, accessing spa and bathing spaces can be fraught with anxiety, harassment, or outright exclusion. Locker rooms, pools, and spas &ndash; spaces that most people take for granted &ndash; can feel hostile or unsafe for those whose bodies do not conform to cisgender expectations.</p>
-  <p>By organizing these gatherings within the safety of the congregation, the church creates a space where members can experience the simple, profound comfort of communal bathing and self-care without fear. These events draw on long traditions of ritual purification and communal bathing found across many faiths &ndash; from the Jewish mikveh to the Japanese onsen to the Roman thermae &ndash; reframed through the lens of trans affirmation and bodily celebration.</p>
-  <p>Spa days may include massage, skincare, hair care, and other affirming services provided in an environment of acceptance and joy. They are a tangible expression of the church's belief that every body is sacred and deserving of care.</p>
-</div>
+{% endunless %}{% endfor %}
 
 <h2>Sacraments &amp; Rites</h2>
 
@@ -126,31 +83,23 @@ permalink: /acts-of-worship/
 
 <h2>Annual Observances</h2>
 
+{% for observance in site.data.annual_observances %}
 <div class="worship-section">
-  <h3>Trans Day of Remembrance</h3>
-  <p>The Blahaj Church marks the Trans Day of Remembrance (November 20) with a special memorial service honoring and remembering the lives of those who have been lost to transphobic violence. The service includes a candlelight vigil at a designated location where candles are lit in memory of those who have been lost. The candles serve as a powerful reminder of the lives lost and the ongoing struggle for trans rights and acceptance.</p>
-  <p>As part of this observance, the First Minister delivers a sermon or prayer reflecting on the significance of the day and the importance of fighting against transphobia and bigotry in all its forms. Members of the congregation may also share their own thoughts or reflections, creating a space for communal grieving and remembrance.</p>
+  <h3>{{ observance.title }}</h3>
+  {% for paragraph in observance.long_paragraphs %}
+  <p>{{ paragraph }}</p>
+  {% endfor %}
 </div>
+{% endfor %}
+
+{% assign motorcycle = site.data.regular_activities | where: "title", "Motorcycle Pilgrimages" | first %}
+<h2>{{ motorcycle.title }}</h2>
 
 <div class="worship-section">
-  <h3>Trans Day of Visibility</h3>
-  <p>The Blahaj Church celebrates Trans Day of Visibility (March 31) by organizing events to promote visibility and empowerment of trans individuals. The First Minister typically gives a sermon on the importance of trans visibility and the need for acceptance and support for the trans community.</p>
-  <p>When possible the church organizes positive social events around the Trans Day of Visibility, ranging from receptions to communal baths to coffee socials.</p>
-  <p>Throughout the day, members of the congregation wear trans flag colors or other trans-related clothing and accessories as a way of showing their support for the trans community. The church also encourages members to engage in acts of allyship and activism, such as participating in trans-led marches or signing petitions in support of trans rights.</p>
-</div>
-
-<div class="worship-section">
-  <h3>SF Pride and Trans March</h3>
-  <p>The Blahaj Church participates in San Francisco Pride and Trans March each June. Several congregants ride with the affiliated Sparkling Pink Pandas motorcycle club, which participates in the march and provides traffic support to ensure the safety of all marchers and spectators.</p>
-  <p>The church recognizes the historical significance of Pride and the ongoing fight for LGBTQ+ rights, including trans rights. The church's participation in Pride serves as a visible representation of support and solidarity for the LGBTQ+ community.</p>
-</div>
-
-<h2>Motorcycle Pilgrimages</h2>
-
-<div class="worship-section">
-  <h3>Rides to Alice's Restaurant</h3>
-  <p>Members who ride motorcycles or scooters gather monthly for a group ride to Alice's Restaurant, a historic eatery in the Bay Area. For the church, these rides are acts of worship &ndash; a celebration of freedom, self-expression, and the experience of living fully in one's body. The open road is a place of reflection and joy, and the shared ride builds fellowship among congregants.</p>
-  <p>These rides are organized through the church's affiliation with the Sparkling Pink Pandas. Non-riders are welcome to meet the group at the destination.</p>
+  <h3>{{ motorcycle.long_title }}</h3>
+  {% for paragraph in motorcycle.long_paragraphs %}
+  <p>{{ paragraph }}</p>
+  {% endfor %}
 </div>
 
 {% include disclaimer-banner.html %}
